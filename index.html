@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UT Contractor | Tile • Flooring • Cabinets • Marble • Carpet in Utah</title>
+  <meta name="description" content="UT Contractor delivers expert tile, flooring, cabinet, marble, and carpet services across Utah. Licensed & insured. Free in-home estimates.">
+
+  <!-- Step 5: this is the line that “links to your CSS file” -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Optional favicon from your assets folder -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>📞 <strong>385-347-9549</strong></div>
+      <div><a class="btn ghost" href="#contact">Get a Free Estimate</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="UT Contractor home">
+        <!-- You can swap this for assets/logo-wordmark.svg later -->
+        <div class="brand__logo">UT</div>
+        <div class="brand__name">UT Contractor</div>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a class="btn" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
+    </div>
+    <div id="mobile-nav" class="mobile" role="navigation" aria-label="Mobile">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">About</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <span class="kicker">Utah • Licensed & Insured</span>
+      <h1>Craftsmanship you can trust. Results you’ll love.</h1>
+      <p>Tile, Flooring, Cabinets, Marble & Carpet — with 30+ years of experience across Utah homes and businesses.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Get a Free Estimate</a>
+        <a class="btn ghost" href="tel:13853479549">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- You can paste the rest of the sections later; for now this proves CSS is working -->
+  <footer>
+    <div class="container copyright">
+      © <span id="year"></span> UT Contractor · Licensed & Insured · Wasatch Front, UT
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const btn = document.querySelector('.menu-btn');
+    const mobile = document.getElementById('mobile-nav');
+    btn?.addEventListener('click', ()=>{
+      mobile.classList.toggle('open');
+      btn.setAttribute('aria-expanded', mobile.classList.contains('open'));
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
