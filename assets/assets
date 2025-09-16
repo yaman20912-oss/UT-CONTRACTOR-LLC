@@ -1,0 +1,8 @@
+assets/
+├─ README.md
+├─ brand-colors.json
+├─ favicon.svg
+├─ logo-mark.svg
+├─ logo-wordmark.svg
+└─ gallery/
+   └─ README.md
