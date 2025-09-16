@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .bg { fill: #2082D3; }
+      .tx { fill: #ffffff; font: 700 220px 'Montserrat', Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="64" ry="64"/>
+  <text class="tx" x="92" y="330">UT</text>
+</svg>
