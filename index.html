@@ -63,6 +63,185 @@
       </div>
     </div>
   </section>
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Services</h2>
+      <a class="btn ghost" href="#contact">Book a Measure</a>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Tile</h3>
+        <p>Showers & tubs, backsplashes, large-format, fireplaces, patios, waterproofing. Materials: porcelain, ceramic, natural stone, mosaic.</p>
+        <a class="btn ghost" href="#contact">Get Tile Estimate</a>
+      </div>
+      <div class="card">
+        <h3>Flooring</h3>
+        <p>Hardwood, laminate, vinyl/LVP, engineered wood, refinishing. Add-ons: baseboards, transitions, floor leveling.</p>
+        <a class="btn ghost" href="#contact">Get Flooring Estimate</a>
+      </div>
+      <div class="card">
+        <h3>Cabinets</h3>
+        <p>Design & install, refacing, soft-close hardware, custom storage built for your space.</p>
+        <a class="btn ghost" href="#contact">Cabinet Consult</a>
+      </div>
+      <div class="card">
+        <h3>Marble</h3>
+        <p>Counters, vanities, showers, stair treads, fireplace surrounds. Care: sealing schedule, stain prevention, cleaning dos/don’ts.</p>
+        <a class="btn ghost" href="#contact">Get Marble Estimate</a>
+      </div>
+      <div class="card">
+        <h3>Carpet</h3>
+        <p>New installs, restretching, repairs, padding upgrades for a clean, soft finish.</p>
+        <a class="btn ghost" href="#contact">Get Carpet Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Gallery -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <p class="muted">Replace these placeholders with your real photos in <code>assets/gallery/</code>.</p>
+    </div>
+    <div class="gallery">
+      <div class="tile">Kitchen Backsplash — Sandy</div>
+      <div class="tile">Herringbone Entry — Draper</div>
+      <div class="tile">Marble Vanity — SLC</div>
+      <div class="tile">LVP Living Room — Lehi</div>
+      <div class="tile">Custom Shower — Murray</div>
+      <div class="tile">Stair Treads — South Jordan</div>
+    </div>
+  </div>
+</section>
+<!-- Reviews -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <h2>Reviews</h2>
+      <a class="btn ghost" href="#" aria-label="Leave a review">Leave a Review</a>
+    </div>
+
+    <div class="reviews">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        “UT Contractor transformed our kitchen. On time, fair price, beautiful work.”
+        — <strong>Sarah M., Sandy</strong>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        “Professional and clean installation. The new floors look amazing!”
+        — <strong>Jason R., Lehi</strong>
+      </div>
+
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        “Clear communication and quality tile work. Highly recommend.”
+        — <strong>Hannah T., Draper</strong>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About -->
+<section id="about">
+  <div class="container grid-2">
+    <div>
+      <h2>About UT Contractor</h2>
+      <p>We started with one goal: deliver honest, reliable craftsmanship that lasts. Today, UT Contractor brings together specialists in tile, flooring, cabinets, marble, and carpet to deliver clean finishes and on-time results. We treat every home like our own — communicating clearly, protecting your space, and standing behind our work.</p>
+      <p><strong>Badges:</strong> Licensed & Insured · Warranty on Labor (specify) · Local Pros</p>
+    </div>
+    <div class="contact-card">
+      <h3>Service Area</h3>
+      <p>Salt Lake County · Utah County · Davis County · Weber County (call for other areas)</p>
+      <h3>Hours</h3>
+      <p>Mon–Sat, 8am–6pm</p>
+    </div>
+  </div>
+</section>
+<!-- FAQs -->
+<section id="faqs">
+  <div class="container">
+    <div class="section-head"><h2>FAQs</h2></div>
+
+    <details open>
+      <summary>Are estimates free?</summary>
+      <p>Yes — we’ll visit your home, measure, and send a written quote.</p>
+    </details>
+
+    <details>
+      <summary>How long does a typical project take?</summary>
+      <p>Small projects: 1–3 days; larger remodels vary by scope.</p>
+    </details>
+
+    <details>
+      <summary>Do you offer a warranty?</summary>
+      <p>Yes — on labor and manufacturer warranty on materials (details in your contract).</p>
+    </details>
+
+    <details>
+      <summary>What areas do you serve?</summary>
+      <p>Most of the Wasatch Front; call to confirm your city.</p>
+    </details>
+
+    <details>
+      <summary>Can you help with design?</summary>
+      <p>Absolutely — we help with layout, materials, and finishes.</p>
+    </details>
+  </div>
+</section>
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact • Free Estimate</h2>
+      <p class="muted">Tell us about your project and we’ll reach out within 1 business day.</p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Form -->
+      <form id="estimate-form" action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Name" placeholder="Full name *" required />
+        <input type="tel"  name="Phone" placeholder="Phone *" required />
+        <input class="full" type="email" name="Email" placeholder="Email *" required />
+        <input type="text" name="City" placeholder="City" />
+        <input type="text" name="Zip" placeholder="ZIP" />
+
+        <select name="Service" class="full" required>
+          <option value="">Service needed *</option>
+          <option>Tile</option>
+          <option>Flooring</option>
+          <option>Cabinets</option>
+          <option>Marble</option>
+          <option>Carpet</option>
+        </select>
+
+        <select name="Budget">
+          <option value="">Budget (optional)</option>
+          <option>$1k–$3k</option>
+          <option>$3k–$8k</option>
+          <option>$8k–$15k</option>
+          <option>$15k+</option>
+        </select>
+
+        <textarea class="full" name="Description" placeholder="Describe your project..."></textarea>
+        <button class="btn" type="submit">Send Request</button>
+      </form>
+
+      <!-- Contact card -->
+      <div class="contact-card">
+        <h3>Reach us</h3>
+        <p>📞 <a href="tel:13853479549">385-347-9549</a><br/>
+           ✉️ <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br/>
+           🌐 <a href="https://www.utcontr.com">www.utcontr.com</a><br/>
+           👍 Facebook: <a href="#" aria-label="UT Contractor on Facebook">UT Contractor</a></p>
+        <p><strong>Address</strong> (optional) • Wasatch Front, UT</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- You can paste the rest of the sections later; for now this proves CSS is working -->
   <footer>
@@ -70,17 +249,5 @@
       © <span id="year"></span> UT Contractor · Licensed & Insured · Wasatch Front, UT
     </div>
   </footer>
-
-  <script>
-    // Mobile nav toggle
-    const btn = document.querySelector('.menu-btn');
-    const mobile = document.getElementById('mobile-nav');
-    btn?.addEventListener('click', ()=>{
-      mobile.classList.toggle('open');
-      btn.setAttribute('aria-expanded', mobile.classList.contains('open'));
-    });
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
