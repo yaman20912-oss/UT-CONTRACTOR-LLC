@@ -20,23 +20,30 @@
 </head>
 <body>
 
-  <!-- ===== Header ===== -->
-  <header class="flex items-center px-6 py-4 shadow bg-white">
-    <!-- Logo -->
-    <div class="flex items-center space-x-2">
-      <img src="images/logo.png" alt="UT Contractor Logo" class="h-8 w-auto">
-      <span class="font-bold text-lg">UT Contractor</span>
-    </div>
+<!-- ===== Header ===== -->
+<header class="flex items-center justify-between px-6 py-4 shadow bg-white">
+  <!-- Left: Logo -->
+  <div class="flex items-center space-x-2">
+    <img src="images/logo.png" alt="UT Contractor Logo" class="h-10 w-auto">
+    <span class="font-bold text-lg">UT Contractor</span>
+  </div>
 
-    <!-- Nav -->
-    <nav class="flex items-center space-x-6 ml-10 font-medium">
-      <a href="#home" class="hover:text-blue-600">Home</a>
-      <a href="#services" class="hover:text-blue-600">Services</a>
-      <a href="#reviews" class="hover:text-blue-600">Reviews</a>
-      <a href="#projects" class="hover:text-blue-600">Projects</a>
-      <a href="#about" class="hover:text-blue-600">About Us</a>
-    </nav>
-  </header>
+  <!-- Center: Nav Links -->
+  <nav class="flex items-center space-x-6 font-medium">
+    <a href="#home" class="hover:text-blue-600">Home</a>
+    <a href="#services" class="hover:text-blue-600">Services</a>
+    <a href="#reviews" class="hover:text-blue-600">Reviews</a>
+    <a href="#projects" class="hover:text-blue-600">Projects</a>
+    <a href="#about" class="hover:text-blue-600">About Us</a>
+  </nav>
+
+  <!-- Right: (Optional buttons like “Call Now”) -->
+  <!-- If you don’t want any buttons, just delete this div -->
+  <div class="hidden md:flex items-center space-x-4">
+    <a href="tel:13853479549" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Call Now</a>
+    <a href="sms:13853479549" class="bg-gray-200 text-gray-900 px-4 py-2 rounded hover:bg-gray-300">Text Us</a>
+  </div>
+</header>
 
   <!-- ===== Mobile Menu ===== -->
   <nav id="mobile-nav" class="mobile" aria-label="Mobile">
