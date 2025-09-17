@@ -3,12 +3,19 @@
    simple form validation + mailto guard.
 */
 
-// 1) Mobile nav toggle
+// Mobile menu toggle
 const btn = document.querySelector('.menu-btn');
 const mobile = document.getElementById('mobile-nav');
 btn?.addEventListener('click', () => {
   mobile?.classList.toggle('open');
-  btn.setAttribute('aria-expanded', mobile.classList.contains('open'));
+  btn.setAttribute('aria-expanded', mobile?.classList.contains('open'));
+});
+
+// Header shadow on scroll (subtle)
+const hdr = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  if (!hdr) return;
+  hdr.classList.toggle('header-scrolled', window.scrollY > 6);
 });
 
 // 2) Smooth-scroll for on-page anchors (nav links)
