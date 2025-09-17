@@ -102,3 +102,30 @@ footer a{color:#E6F2FF}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;padding:2rem 0}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr}}
 .copyright{border-top:1px solid #1e293b;padding:.9rem 0;color:#9fb5cc}
+/* Link Hub (Angi-style, no Top Cities) */
+.link-hub{
+  border-top:1px solid var(--border);
+  background:#fff;
+  padding:2rem 0;
+}
+.link-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.25rem;
+}
+.link-col h3{
+  margin:.25rem 0 .6rem;
+  font-size:1rem;
+  color:var(--ink);
+}
+.link-col ul{list-style:none;margin:0;padding:0}
+.link-col li+li{margin-top:.35rem}
+.link-col a{
+  color:var(--brand-700);
+  text-decoration:none;
+}
+.link-col a:hover{ text-decoration:underline; }
+
+@media (max-width:1000px){ .link-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .link-grid{grid-template-columns:1fr;} }
+
