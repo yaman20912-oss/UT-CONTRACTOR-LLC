@@ -9,7 +9,10 @@
   <!-- Favicon / Brand -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-  <!-- Styles -->
+  <!-- Tailwind CSS (needed for flex, spacing, colors, etc.) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Fonts -->
@@ -18,34 +21,34 @@
   <!-- Script (nav toggle, year, etc.) -->
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body class="font-inter text-gray-900">
 
-<!-- ===== Header ===== -->
-<header class="flex items-center justify-between px-6 py-4 shadow bg-white">
-  <!-- Left: Logo -->
-  <div class="flex items-center space-x-2">
-    <img src="images/logo.png" alt="UT Contractor Logo" class="h-10 w-auto">
-    <span class="font-bold text-lg">UT Contractor</span>
-  </div>
+  <!-- ===== Header ===== -->
+  <header class="flex items-center justify-between px-6 py-4 shadow bg-white sticky top-0 z-50">
+    <!-- Left: Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="images/logo.png" alt="UT Contractor Logo" class="h-10 w-auto">
+      <span class="font-bold text-lg">UT Contractor</span>
+    </div>
 
-  <!-- Center: Nav Links -->
-  <nav class="hidden md:flex items-center space-x-6 font-medium">
-    <a href="#home" class="hover:text-blue-600">Home</a>
-    <a href="#services" class="hover:text-blue-600">Services</a>
-    <a href="#reviews" class="hover:text-blue-600">Reviews</a>
-    <a href="#projects" class="hover:text-blue-600">Projects</a>
-    <a href="#about" class="hover:text-blue-600">About Us</a>
-  </nav>
+    <!-- Center: Nav Links -->
+    <nav class="hidden md:flex items-center space-x-6 font-medium">
+      <a href="#home" class="hover:text-blue-600">Home</a>
+      <a href="#services" class="hover:text-blue-600">Services</a>
+      <a href="#reviews" class="hover:text-blue-600">Reviews</a>
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#about" class="hover:text-blue-600">About Us</a>
+    </nav>
 
-  <!-- Right: Call-to-Action -->
-  <div class="hidden md:flex items-center space-x-4">
-    <a href="tel:13853479549" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Call Now</a>
-    <a href="sms:13853479549" class="bg-gray-200 text-gray-900 px-4 py-2 rounded hover:bg-gray-300">Text Us</a>
-  </div>
-</header>
+    <!-- Right: Call-to-Action (optional, remove if not needed) -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="tel:13853479549" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Call Now</a>
+      <a href="sms:13853479549" class="bg-gray-200 text-gray-900 px-4 py-2 rounded hover:bg-gray-300">Text Us</a>
+    </div>
+  </header>
 
   <!-- ===== Mobile Menu ===== -->
-  <nav id="mobile-nav" class="mobile" aria-label="Mobile">
+  <nav id="mobile-nav" class="mobile md:hidden flex flex-col bg-white shadow p-4 space-y-2" aria-label="Mobile">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#reviews">Reviews</a>
@@ -54,90 +57,86 @@
   </nav>
 
   <!-- ===== Hero ===== -->
-  <section id="home" class="hero hero-photo">
-    <div class="hero-card" role="region" aria-label="Welcome">
-      <h1>Welcome to UT Contractor</h1>
-      <p>We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
+  <section id="home" class="hero hero-photo bg-gradient-to-r from-blue-500 to-blue-700 text-white py-24">
+    <div class="max-w-2xl mx-auto text-center bg-white/80 text-gray-900 p-8 rounded-lg shadow">
+      <h1 class="text-3xl font-bold mb-4">Welcome to UT Contractor</h1>
+      <p class="text-lg">We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
     </div>
   </section>
 
   <!-- ===== Services ===== -->
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <h2>Services</h2>
+  <section id="services" class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="section-head mb-8">
+        <h2 class="text-2xl font-bold">Services</h2>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <div class="icon">🧱</div>
-          <h3>Tile</h3>
+      <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <div class="icon text-3xl">🧱</div>
+          <h3 class="font-semibold mt-2">Tile</h3>
           <p>Showers & tubs, backsplashes, fireplaces, patios. Porcelain, ceramic, stone — waterproofed right.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">🪵</div>
-          <h3>Flooring</h3>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <div class="icon text-3xl">🪵</div>
+          <h3 class="font-semibold mt-2">Flooring</h3>
           <p>Hardwood, laminate, vinyl/LVP, engineered. Baseboards, transitions, and floor leveling for a seamless finish.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">🚪</div>
-          <h3>Cabinets</h3>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <div class="icon text-3xl">🚪</div>
+          <h3 class="font-semibold mt-2">Cabinets</h3>
           <p>Design & install, refacing, soft-close hardware, and smart storage built for your space.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">🪨</div>
-          <h3>Marble</h3>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <div class="icon text-3xl">🪨</div>
+          <h3 class="font-semibold mt-2">Marble</h3>
           <p>Counters, vanities, shower walls, stair treads, fireplace surrounds. Proper sealing & care.</p>
         </div>
 
-        <div class="card">
-          <div class="icon">🧶</div>
-          <h3>Carpet</h3>
+        <div class="card bg-white p-6 rounded-lg shadow">
+          <div class="icon text-3xl">🧶</div>
+          <h3 class="font-semibold mt-2">Carpet</h3>
           <p>New installs, restretching, repairs, padding upgrades for a clean, soft finish.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Gallery / Projects ===== -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-head"><h2>Projects</h2></div>
-      <p class="muted">Replace these placeholders with your real photos in <code>assets/gallery/</code>.</p>
-      <div class="gallery">
-        <div class="tile">Kitchen Backsplash — Sandy</div>
-        <div class="tile">Herringbone Entry — Draper</div>
-        <div class="tile">Marble Vanity — SLC</div>
-        <div class="tile">LVP Living Room — Lehi</div>
-        <div class="tile">Custom Shower — Murray</div>
-        <div class="tile">Stair Treads — South Jordan</div>
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="section-head mb-8"><h2 class="text-2xl font-bold">Projects</h2></div>
+      <div class="grid gap-4 md:grid-cols-3">
+        <div class="tile bg-white p-6 rounded shadow">Kitchen Backsplash — Sandy</div>
+        <div class="tile bg-white p-6 rounded shadow">Herringbone Entry — Draper</div>
+        <div class="tile bg-white p-6 rounded shadow">Marble Vanity — SLC</div>
+        <div class="tile bg-white p-6 rounded shadow">LVP Living Room — Lehi</div>
+        <div class="tile bg-white p-6 rounded shadow">Custom Shower — Murray</div>
+        <div class="tile bg-white p-6 rounded shadow">Stair Treads — South Jordan</div>
       </div>
     </div>
   </section>
 
   <!-- ===== Reviews ===== -->
-  <section id="reviews">
-    <div class="container">
-      <div class="section-head"><h2>Reviews</h2></div>
-
-      <div class="reviews">
-        <div class="quote">
-          <div class="stars">★★★★★</div>
+  <section id="reviews" class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="section-head mb-8"><h2 class="text-2xl font-bold">Reviews</h2></div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="quote bg-white p-6 rounded shadow">
+          <div class="stars text-yellow-500">★★★★★</div>
           <p>“UT Contractor transformed our kitchen. On time, fair price, beautiful work.”</p>
           <p><strong>Sarah M., Sandy</strong></p>
         </div>
-
-        <div class="quote">
-          <div class="stars">★★★★★</div>
+        <div class="quote bg-white p-6 rounded shadow">
+          <div class="stars text-yellow-500">★★★★★</div>
           <p>“Professional and clean installation. The new floors look amazing!”</p>
           <p><strong>Jason R., Lehi</strong></p>
         </div>
-
-        <div class="quote">
-          <div class="stars">★★★★★</div>
+        <div class="quote bg-white p-6 rounded shadow">
+          <div class="stars text-yellow-500">★★★★★</div>
           <p>“Clear communication and quality tile work. Highly recommend.”</p>
           <p><strong>Hannah T., Draper</strong></p>
         </div>
@@ -146,49 +145,44 @@
   </section>
 
   <!-- ===== About ===== -->
-  <section id="about">
-    <div class="container grid-2">
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
       <div>
-        <div class="section-head"><h2>About UT Contractor</h2></div>
+        <h2 class="text-2xl font-bold mb-4">About UT Contractor</h2>
         <p>Craftsmanship you can count on: we deliver honest, reliable, clean work that lasts. Today, UT Contractor focuses on tile, flooring, cabinets, marble, and carpet across Utah homes and businesses.</p>
-        <p><strong>Badges:</strong> <span class="badge">Licensed & Insured</span> · <span class="badge">Warranty on Labor</span> · <span class="badge">Local Pros</span></p>
+        <p class="mt-4"><strong>Badges:</strong> <span class="badge">Licensed & Insured</span> · <span class="badge">Warranty on Labor</span> · <span class="badge">Local Pros</span></p>
       </div>
-      <div class="contact-card">
-        <h3>Service Area</h3>
+      <div class="contact-card bg-white p-6 rounded shadow">
+        <h3 class="font-semibold mb-2">Service Area</h3>
         <p>Salt Lake County · Utah County · Davis County · Weber County (call for other areas)</p>
-        <p><strong>Hours:</strong> Mon–Sat, 8am–6pm</p>
+        <p class="mt-2"><strong>Hours:</strong> Mon–Sat, 8am–6pm</p>
       </div>
     </div>
   </section>
 
   <!-- ===== FAQs ===== -->
-  <section id="faqs">
-    <div class="container">
-      <div class="section-head"><h2>FAQs</h2></div>
-
-      <div class="faq">
-        <details open>
-          <summary>Are estimates free?</summary>
+  <section id="faqs" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-6">FAQs</h2>
+      <div class="space-y-4">
+        <details class="bg-white p-4 rounded shadow" open>
+          <summary class="font-semibold">Are estimates free?</summary>
           <p>Yes — we’ll visit your home, measure, and send a written quote.</p>
         </details>
-
-        <details>
-          <summary>How long does a typical project take?</summary>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="font-semibold">How long does a typical project take?</summary>
           <p>Small projects 1–3 days; larger remodels vary by scope.</p>
         </details>
-
-        <details>
-          <summary>Do you offer a warranty?</summary>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="font-semibold">Do you offer a warranty?</summary>
           <p>Yes — on labor and manufacturer warranty on materials (details in your contract).</p>
         </details>
-
-        <details>
-          <summary>What areas do you serve?</summary>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="font-semibold">What areas do you serve?</summary>
           <p>Most of the Wasatch Front; call to confirm your city.</p>
         </details>
-
-        <details>
-          <summary>Can you help with design?</summary>
+        <details class="bg-white p-4 rounded shadow">
+          <summary class="font-semibold">Can you help with design?</summary>
           <p>Absolutely — we help with layout, materials, and finishes.</p>
         </details>
       </div>
@@ -196,86 +190,77 @@
   </section>
 
   <!-- ===== Contact ===== -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head"><h2>Contact</h2></div>
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <!-- Form -->
+      <form id="estimate-form" action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain" class="bg-white p-6 rounded shadow space-y-4">
+        <label class="block">Full name *<input type="text" name="Name" required class="w-full border p-2 rounded"></label>
+        <label class="block">Phone *<input type="tel" name="Phone" required class="w-full border p-2 rounded"></label>
+        <label class="block">Email *<input type="email" name="Email" required class="w-full border p-2 rounded"></label>
+        <label class="block">City<input type="text" name="City" class="w-full border p-2 rounded"></label>
+        <label class="block">ZIP<input type="text" name="Zip" class="w-full border p-2 rounded"></label>
+        <label class="block">Service needed *
+          <select name="Service" required class="w-full border p-2 rounded">
+            <option value="">Choose…</option>
+            <option>Tile</option>
+            <option>Flooring</option>
+            <option>Cabinets</option>
+            <option>Marble</option>
+            <option>Carpet</option>
+          </select>
+        </label>
+        <label class="block">Budget
+          <select name="Budget" class="w-full border p-2 rounded">
+            <option value="">(optional)</option>
+            <option>$1k–$3k</option>
+            <option>$3k–$8k</option>
+            <option>$8k–$15k</option>
+            <option>$15k+</option>
+          </select>
+        </label>
+        <label class="block">Project details
+          <textarea name="Description" placeholder="Rooms, materials, timing…" class="w-full border p-2 rounded"></textarea>
+        </label>
+        <button class="btn bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" type="submit">Send Request</button>
+      </form>
 
-      <div class="grid-2">
-        <!-- form -->
-        <form id="estimate-form" action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain">
-          <label>Full name *<input type="text" name="Name" required aria-required="true"></label>
-          <label>Phone *<input type="tel" name="Phone" required aria-required="true"></label>
-          <label class="full">Email *<input type="email" name="Email" required aria-required="true"></label>
-          <label>City<input type="text" name="City"></label>
-          <label>ZIP<input type="text" name="Zip"></label>
-
-          <label class="full">Service needed *
-            <select name="Service" required aria-required="true">
-              <option value="">Choose…</option>
-              <option>Tile</option>
-              <option>Flooring</option>
-              <option>Cabinets</option>
-              <option>Marble</option>
-              <option>Carpet</option>
-            </select>
-          </label>
-
-          <label>Budget
-            <select name="Budget">
-              <option value="">(optional)</option>
-              <option>$1k–$3k</option>
-              <option>$3k–$8k</option>
-              <option>$8k–$15k</option>
-              <option>$15k+</option>
-            </select>
-          </label>
-
-          <label class="full">Project details
-            <textarea name="Description" placeholder="Rooms, materials, timing…"></textarea>
-          </label>
-
-          <p class="help full">We’ll only use your info to respond to your request.</p>
-          <button class="btn" type="submit">Send Request</button>
-        </form>
-
-        <!-- Contact card -->
-        <div class="contact-card">
-          <h3>Reach us</h3>
-          <p>
-            <a href="tel:13853479549">385-347-9549</a><br>
-            <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
-            <a href="https://www.utcontr.com">www.utcontr.com</a><br>
-            Facebook: <a href="#" aria-label="UT Contractor on Facebook">UT Contractor</a>
-          </p>
-          <p><strong>Address</strong> (optional) · Wasatch Front, UT</p>
-        </div>
+      <!-- Contact Info -->
+      <div class="contact-card bg-white p-6 rounded shadow">
+        <h3 class="font-semibold mb-2">Reach us</h3>
+        <p>
+          <a href="tel:13853479549">385-347-9549</a><br>
+          <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
+          <a href="https://www.utcontr.com">www.utcontr.com</a><br>
+          Facebook: <a href="#" aria-label="UT Contractor on Facebook">UT Contractor</a>
+        </p>
+        <p class="mt-4"><strong>Address</strong> (optional) · Wasatch Front, UT</p>
       </div>
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer>
-    <div class="container foot-grid">
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
       <div>
-        <h3 style="color:#fff;margin-bottom:.4rem;">UT Contractor</h3>
+        <h3 class="font-bold mb-2">UT Contractor</h3>
         <p>Tile • Flooring • Cabinets • Marble • Carpet.<br/>Serving the Wasatch Front, UT.</p>
-        <div class="badges">
-          <span class="badge">Licensed & Insured</span>
-          <span class="badge">Warranty on Labor</span>
+        <div class="flex gap-2 mt-2">
+          <span class="badge bg-blue-600 text-white px-2 py-1 rounded">Licensed & Insured</span>
+          <span class="badge bg-blue-600 text-white px-2 py-1 rounded">Warranty on Labor</span>
         </div>
       </div>
       <div>
-        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Company</h4>
+        <h4 class="font-semibold mb-2">Company</h4>
         <p><a href="#home">Home</a><br><a href="#reviews">Reviews</a><br><a href="#faqs">FAQs</a></p>
       </div>
       <div>
-        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Contact</h4>
+        <h4 class="font-semibold mb-2">Contact</h4>
         <p><a href="tel:13853479549">385-347-9549</a><br>
            <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
            <a href="#contact">Free Estimate</a></p>
       </div>
     </div>
-    <div class="copyright">© <span id="year"></span> UT Contractor · All rights reserved.</div>
+    <div class="text-center text-sm mt-8">© <span id="year"></span> UT Contractor · All rights reserved.</div>
   </footer>
 
 </body>
