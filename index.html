@@ -20,22 +20,24 @@
 <body>
 
   <!-- ===== Header / Nav ===== -->
-  <header>
-    <div class="container nav">
-      <a class="brand" href="./" aria-label="UT Contractor home">
-        <img src="assets/logo-wordmark.svg" alt="UT Contractor" style="height:38px">
-      </a>
+  <header class="flex items-center justify-between px-6 py-4 shadow bg-white">
+  <!-- Logo -->
+  <div class="flex items-center space-x-2">
+    <img src="images/logo.png" alt="UT Contractor Logo" class="h-8 w-auto">
+    <span class="font-bold text-lg">UT Contractor</span>
+  </div>
 
-      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
-
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Images</a></li>
-          <li><a class="btn" href="#contact">Contact Us</a></li>
-        </ul>
-      </nav>
+  <!-- Nav -->
+  <nav class="hidden md:flex space-x-6 font-medium">
+    <a href="#home" class="hover:text-blue-600">Home</a>
+    <a href="#services" class="hover:text-blue-600">Services</a>
+    <a href="#reviews" class="hover:text-blue-600">Reviews</a>
+    <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+    <a href="#about" class="hover:text-blue-600">About Us</a>
+    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
+      Contact Us
+    </a>
+  </nav>
     </div>
 
     <!-- Mobile menu -->
