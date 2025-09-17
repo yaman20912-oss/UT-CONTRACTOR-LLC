@@ -19,8 +19,7 @@
 </head>
 <body>
 
-  
-  <header class="flex items-center justify-between px-6 py-4 shadow bg-white">
+  <header class="flex items-center px-6 py-4 shadow bg-white">
   <!-- Logo -->
   <div class="flex items-center space-x-2">
     <img src="images/logo.png" alt="UT Contractor Logo" class="h-8 w-auto">
@@ -28,26 +27,23 @@
   </div>
 
   <!-- Nav -->
-  <nav class="hidden md:flex space-x-6 font-medium">
+  <nav class="flex items-center space-x-6 ml-10 font-medium">
     <a href="#home" class="hover:text-blue-600">Home</a>
     <a href="#services" class="hover:text-blue-600">Services</a>
     <a href="#reviews" class="hover:text-blue-600">Reviews</a>
-    <a href="#portfolio" class="hover:text-blue-600">Portfolio</a>
+    <a href="#projects" class="hover:text-blue-600">Projects</a>
     <a href="#about" class="hover:text-blue-600">About Us</a>
-    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700">
-      Contact Us
-    </a>
   </nav>
-    </div>
+</header>
 
-    <!-- Mobile menu -->
-    <nav id="mobile-nav" class="mobile" aria-label="Mobile">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Images</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
+   <!-- Mobile menu -->
+<nav id="mobile-nav" class="mobile" aria-label="Mobile">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#projects">Projects</a>
+  <a href="#about">About Us</a>
+</nav>
 
   <!-- ===== Hero (Full photo with centered welcome card) ===== -->
   <section id="home" class="hero hero-photo">
@@ -55,7 +51,7 @@
       <h1>Welcome to UT Contractor</h1>
       <p>We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
       <div class="actions">
-        <a class="btn" href="#contact">Contact Us</a>
+<a href="#contact" class="btn" role="button">Contact Us</a>
         <a class="btn ghost" href="#contact">Get a Quote</a>
       </div>
     </div>
