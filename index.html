@@ -11,7 +11,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-  <!-- Luxury fonts -->
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Script (nav toggle, year, etc.) -->
@@ -19,41 +20,38 @@
 </head>
 <body>
 
+  <!-- ===== Header ===== -->
   <header class="flex items-center px-6 py-4 shadow bg-white">
-  <!-- Logo -->
-  <div class="flex items-center space-x-2">
-    <img src="images/logo.png" alt="UT Contractor Logo" class="h-8 w-auto">
-    <span class="font-bold text-lg">UT Contractor</span>
-  </div>
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="images/logo.png" alt="UT Contractor Logo" class="h-8 w-auto">
+      <span class="font-bold text-lg">UT Contractor</span>
+    </div>
 
-  <!-- Nav -->
-  <nav class="flex items-center space-x-6 ml-10 font-medium">
-    <a href="#home" class="hover:text-blue-600">Home</a>
-    <a href="#services" class="hover:text-blue-600">Services</a>
-    <a href="#reviews" class="hover:text-blue-600">Reviews</a>
-    <a href="#projects" class="hover:text-blue-600">Projects</a>
-    <a href="#about" class="hover:text-blue-600">About Us</a>
+    <!-- Nav -->
+    <nav class="flex items-center space-x-6 ml-10 font-medium">
+      <a href="#home" class="hover:text-blue-600">Home</a>
+      <a href="#services" class="hover:text-blue-600">Services</a>
+      <a href="#reviews" class="hover:text-blue-600">Reviews</a>
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#about" class="hover:text-blue-600">About Us</a>
+    </nav>
+  </header>
+
+  <!-- ===== Mobile Menu ===== -->
+  <nav id="mobile-nav" class="mobile" aria-label="Mobile">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About Us</a>
   </nav>
-</header>
 
-   <!-- Mobile menu -->
-<nav id="mobile-nav" class="mobile" aria-label="Mobile">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#projects">Projects</a>
-  <a href="#about">About Us</a>
-</nav>
-
-  <!-- ===== Hero (Full photo with centered welcome card) ===== -->
+  <!-- ===== Hero ===== -->
   <section id="home" class="hero hero-photo">
     <div class="hero-card" role="region" aria-label="Welcome">
       <h1>Welcome to UT Contractor</h1>
       <p>We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
-      <div class="actions">
-<a href="#contact" class="btn" role="button">Contact Us</a>
-        <a class="btn ghost" href="#contact">Get a Quote</a>
-      </div>
     </div>
   </section>
 
@@ -62,7 +60,6 @@
     <div class="container">
       <div class="section-head">
         <h2>Services</h2>
-        <a class="btn ghost" href="#contact">Book a Measure</a>
       </div>
 
       <div class="cards">
@@ -70,44 +67,39 @@
           <div class="icon">🧱</div>
           <h3>Tile</h3>
           <p>Showers & tubs, backsplashes, fireplaces, patios. Porcelain, ceramic, stone — waterproofed right.</p>
-          <a class="btn ghost" href="#contact">Get Tile Estimate</a>
         </div>
 
         <div class="card">
           <div class="icon">🪵</div>
           <h3>Flooring</h3>
           <p>Hardwood, laminate, vinyl/LVP, engineered. Baseboards, transitions, and floor leveling for a seamless finish.</p>
-          <a class="btn ghost" href="#contact">Get Flooring Estimate</a>
         </div>
 
         <div class="card">
           <div class="icon">🚪</div>
           <h3>Cabinets</h3>
           <p>Design & install, refacing, soft-close hardware, and smart storage built for your space.</p>
-          <a class="btn ghost" href="#contact">Cabinet Consult</a>
         </div>
 
         <div class="card">
           <div class="icon">🪨</div>
           <h3>Marble</h3>
           <p>Counters, vanities, shower walls, stair treads, fireplace surrounds. Proper sealing & care.</p>
-          <a class="btn ghost" href="#contact">Get Marble Estimate</a>
         </div>
 
         <div class="card">
           <div class="icon">🧶</div>
           <h3>Carpet</h3>
           <p>New installs, restretching, repairs, padding upgrades for a clean, soft finish.</p>
-          <a class="btn ghost" href="#contact">Get Carpet Estimate</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Gallery ===== -->
-  <section id="gallery">
+  <!-- ===== Gallery / Projects ===== -->
+  <section id="projects">
     <div class="container">
-      <div class="section-head"><h2>Gallery</h2></div>
+      <div class="section-head"><h2>Projects</h2></div>
       <p class="muted">Replace these placeholders with your real photos in <code>assets/gallery/</code>.</p>
       <div class="gallery">
         <div class="tile">Kitchen Backsplash — Sandy</div>
@@ -123,10 +115,7 @@
   <!-- ===== Reviews ===== -->
   <section id="reviews">
     <div class="container">
-      <div class="section-head">
-        <h2>Reviews</h2>
-        <a class="btn ghost" href="#contact" aria-label="Leave a review">Leave a Review</a>
-      </div>
+      <div class="section-head"><h2>Reviews</h2></div>
 
       <div class="reviews">
         <div class="quote">
@@ -255,72 +244,6 @@
           <p><strong>Address</strong> (optional) · Wasatch Front, UT</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== Link Hub (Angi-style, no “Top cities”) ===== -->
-  <section class="link-hub">
-    <div class="container">
-      <div class="link-grid">
-        <div class="link-col">
-          <h3>Related services</h3>
-          <ul>
-            <li><a href="#services">Tile installation</a></li>
-            <li><a href="#services">Flooring (LVP, hardwood, laminate)</a></li>
-            <li><a href="#services">Cabinet install &amp; refacing</a></li>
-            <li><a href="#services">Marble &amp; stone</a></li>
-            <li><a href="#services">Carpet install &amp; restretch</a></li>
-            <li><a href="#process">Subfloor leveling &amp; prep</a></li>
-          </ul>
-        </div>
-
-        <div class="link-col">
-          <h3>Materials &amp; finishes</h3>
-          <ul>
-            <li><a href="#gallery">Porcelain &amp; ceramic tile</a></li>
-            <li><a href="#gallery">Natural stone (marble)</a></li>
-            <li><a href="#gallery">LVP / vinyl plank</a></li>
-            <li><a href="#gallery">Engineered hardwood</a></li>
-            <li><a href="#gallery">Carpet &amp; padding</a></li>
-            <li><a href="#gallery">Cabinet hardware</a></li>
-          </ul>
-        </div>
-
-        <div class="link-col">
-          <h3>Rooms &amp; spaces</h3>
-          <ul>
-            <li><a href="#gallery">Kitchens &amp; backsplashes</a></li>
-            <li><a href="#gallery">Bathrooms &amp; showers</a></li>
-            <li><a href="#gallery">Living rooms &amp; stairs</a></li>
-            <li><a href="#gallery">Basements &amp; rentals</a></li>
-            <li><a href="#gallery">Fireplaces &amp; patios</a></li>
-            <li><a href="#gallery">Commercial spaces</a></li>
-          </ul>
-        </div>
-
-        <div class="link-col">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#process">Our process</a></li>
-            <li><a href="#reviews">Customer reviews</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#contact">Get a free estimate</a></li>
-            <li><a href="tel:13853479549">Call 385-347-9549</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Service Areas (summary) ===== -->
-  <section id="service-areas">
-    <div class="container">
-      <div class="section-head">
-        <h2>Service Areas</h2>
-        <a class="btn luxe" href="locations.html">View all locations</a>
-      </div>
-      <p class="muted">We serve the Wasatch Front and beyond — Salt Lake City, West Valley City, Sandy, Draper, South Jordan, West Jordan, Herriman, Riverton, Millcreek, Murray, Taylorsville, Holladay, Bountiful, Layton, Ogden, Provo, Orem, Lehi, American Fork, Eagle Mountain, Saratoga Springs — and many more.</p>
     </div>
   </section>
 
