@@ -1,324 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <header>
-  <div class="container nav">
-    <a class="brand" href="./" aria-label="UT Contractor home">
-      <img src="assets/logo-wordmark.svg" alt="UT Contractor" style="height:38px">
-    </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UT Contractor • Tile • Flooring • Cabinets • Marble • Carpet</title>
+  <meta name="description" content="UT Contractor — Tile, flooring, cabinets, marble, and carpet. Licensed & insured. Free estimates. Serving the Wasatch Front, Utah." />
 
-    <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
+  <!-- Favicon / Brand -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Images</a></li>
-        <li><a href="#contact" class="btn">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Luxury fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- mobile menu -->
-  <nav id="mobile-nav" class="mobile" aria-label="Mobile">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Images</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-    
+  <!-- Script (nav toggle, year, etc.) -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
   <header>
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="UT Contractor home">
-        <!-- You can swap this for assets/logo-wordmark.svg later -->
-        <div class="brand__logo">UT</div>
-        <div class="brand__name">UT Contractor</div>
+      <a class="brand" href="./" aria-label="UT Contractor home">
+        <img src="assets/logo-wordmark.svg" alt="UT Contractor" style="height:38px">
       </a>
-      <nav aria-label="Primary">
+
+      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
+
+      <nav aria-label="Main">
         <ul>
+          <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#faqs">FAQs</a></li>
-          <li><a class="btn" href="#contact">Contact</a></li>
+          <li><a href="#gallery">Images</a></li>
+          <li><a class="btn" href="#contact">Contact Us</a></li>
         </ul>
       </nav>
-      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
     </div>
-    <div id="mobile-nav" class="mobile" role="navigation" aria-label="Mobile">
+
+    <!-- Mobile menu -->
+    <nav id="mobile-nav" class="mobile" aria-label="Mobile">
+      <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#about">About</a>
-      <a href="#faqs">FAQs</a>
-      <a href="#contact">Contact</a>
-    </div>
+      <a href="#gallery">Images</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
   </header>
 
-  <!-- Hero (photo) -->
-<section id="home" class="hero hero-photo">
-  <div class="hero-card" role="region" aria-label="Welcome">
-    <h1>Welcome to UT Contractor</h1>
-    <p>We satisfy you with our work and our word—clean craftsmanship, clear timelines, and results you’ll love.</p>
-    <div class="actions">
-      <a class="btn" href="#contact">Contact Us</a>
-      <a class="btn ghost" href="#contact">Get a Quote</a>
+  <!-- ===== Hero (Full photo with centered welcome card) ===== -->
+  <section id="home" class="hero hero-photo">
+    <div class="hero-card" role="region" aria-label="Welcome">
+      <h1>Welcome to UT Contractor</h1>
+      <p>We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Contact Us</a>
+        <a class="btn ghost" href="#contact">Get a Quote</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Services -->
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <h2>Services</h2>
-      <a class="btn ghost" href="#contact">Book a Measure</a>
+  <!-- ===== Services ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Services</h2>
+        <a class="btn ghost" href="#contact">Book a Measure</a>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">🧱</div>
+          <h3>Tile</h3>
+          <p>Showers & tubs, backsplashes, fireplaces, patios. Porcelain, ceramic, stone — waterproofed right.</p>
+          <a class="btn ghost" href="#contact">Get Tile Estimate</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🪵</div>
+          <h3>Flooring</h3>
+          <p>Hardwood, laminate, vinyl/LVP, engineered. Baseboards, transitions, and floor leveling for a seamless finish.</p>
+          <a class="btn ghost" href="#contact">Get Flooring Estimate</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🚪</div>
+          <h3>Cabinets</h3>
+          <p>Design & install, refacing, soft-close hardware, and smart storage built for your space.</p>
+          <a class="btn ghost" href="#contact">Cabinet Consult</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🪨</div>
+          <h3>Marble</h3>
+          <p>Counters, vanities, shower walls, stair treads, fireplace surrounds. Proper sealing & care.</p>
+          <a class="btn ghost" href="#contact">Get Marble Estimate</a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧶</div>
+          <h3>Carpet</h3>
+          <p>New installs, restretching, repairs, padding upgrades for a clean, soft finish.</p>
+          <a class="btn ghost" href="#contact">Get Carpet Estimate</a>
+        </div>
+      </div>
     </div>
-    <div class="cards">
-      <div class="card">
-        <h3>Tile</h3>
-        <p>Showers & tubs, backsplashes, large-format, fireplaces, patios, waterproofing. Materials: porcelain, ceramic, natural stone, mosaic.</p>
-        <a class="btn ghost" href="#contact">Get Tile Estimate</a>
-      </div>
-      <div class="card">
-        <h3>Flooring</h3>
-        <p>Hardwood, laminate, vinyl/LVP, engineered wood, refinishing. Add-ons: baseboards, transitions, floor leveling.</p>
-        <a class="btn ghost" href="#contact">Get Flooring Estimate</a>
-      </div>
-      <div class="card">
-        <h3>Cabinets</h3>
-        <p>Design & install, refacing, soft-close hardware, custom storage built for your space.</p>
-        <a class="btn ghost" href="#contact">Cabinet Consult</a>
-      </div>
-      <div class="card">
-        <h3>Marble</h3>
-        <p>Counters, vanities, showers, stair treads, fireplace surrounds. Care: sealing schedule, stain prevention, cleaning dos/don’ts.</p>
-        <a class="btn ghost" href="#contact">Get Marble Estimate</a>
-      </div>
-      <div class="card">
-        <h3>Carpet</h3>
-        <p>New installs, restretching, repairs, padding upgrades for a clean, soft finish.</p>
-        <a class="btn ghost" href="#contact">Get Carpet Estimate</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Gallery -->
-<section id="gallery">
-  <div class="container">
-    <div class="section-head">
-      <h2>Gallery</h2>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head"><h2>Gallery</h2></div>
       <p class="muted">Replace these placeholders with your real photos in <code>assets/gallery/</code>.</p>
-    </div>
-    <div class="gallery">
-      <div class="tile">Kitchen Backsplash — Sandy</div>
-      <div class="tile">Herringbone Entry — Draper</div>
-      <div class="tile">Marble Vanity — SLC</div>
-      <div class="tile">LVP Living Room — Lehi</div>
-      <div class="tile">Custom Shower — Murray</div>
-      <div class="tile">Stair Treads — South Jordan</div>
-    </div>
-  </div>
-</section>
-<!-- Reviews -->
-<section id="reviews">
-  <div class="container">
-    <div class="section-head">
-      <h2>Reviews</h2>
-      <a class="btn ghost" href="#" aria-label="Leave a review">Leave a Review</a>
-    </div>
-
-    <div class="reviews">
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        “UT Contractor transformed our kitchen. On time, fair price, beautiful work.”
-        — <strong>Sarah M., Sandy</strong>
-      </div>
-
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        “Professional and clean installation. The new floors look amazing!”
-        — <strong>Jason R., Lehi</strong>
-      </div>
-
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        “Clear communication and quality tile work. Highly recommend.”
-        — <strong>Hannah T., Draper</strong>
+      <div class="gallery">
+        <div class="tile">Kitchen Backsplash — Sandy</div>
+        <div class="tile">Herringbone Entry — Draper</div>
+        <div class="tile">Marble Vanity — SLC</div>
+        <div class="tile">LVP Living Room — Lehi</div>
+        <div class="tile">Custom Shower — Murray</div>
+        <div class="tile">Stair Treads — South Jordan</div>
       </div>
     </div>
-  </div>
-</section>
-<!-- About -->
-<section id="about">
-  <div class="container grid-2">
-    <div>
-      <h2>About UT Contractor</h2>
-      <p>We started with one goal: deliver honest, reliable craftsmanship that lasts. Today, UT Contractor brings together specialists in tile, flooring, cabinets, marble, and carpet to deliver clean finishes and on-time results. We treat every home like our own — communicating clearly, protecting your space, and standing behind our work.</p>
-      <p><strong>Badges:</strong> Licensed & Insured · Warranty on Labor (specify) · Local Pros</p>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2>Reviews</h2>
+        <a class="btn ghost" href="#contact" aria-label="Leave a review">Leave a Review</a>
+      </div>
+
+      <div class="reviews">
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“UT Contractor transformed our kitchen. On time, fair price, beautiful work.”</p>
+          <p><strong>Sarah M., Sandy</strong></p>
+        </div>
+
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“Professional and clean installation. The new floors look amazing!”</p>
+          <p><strong>Jason R., Lehi</strong></p>
+        </div>
+
+        <div class="quote">
+          <div class="stars">★★★★★</div>
+          <p>“Clear communication and quality tile work. Highly recommend.”</p>
+          <p><strong>Hannah T., Draper</strong></p>
+        </div>
+      </div>
     </div>
-    <div class="contact-card">
-      <h3>Service Area</h3>
-      <p>Salt Lake County · Utah County · Davis County · Weber County (call for other areas)</p>
-      <h3>Hours</h3>
-      <p>Mon–Sat, 8am–6pm</p>
-    </div>
-  </div>
-</section>
-<!-- FAQs -->
-<section id="faqs">
-  <div class="container">
-    <div class="section-head"><h2>FAQs</h2></div>
+  </section>
 
-    <details open>
-      <summary>Are estimates free?</summary>
-      <p>Yes — we’ll visit your home, measure, and send a written quote.</p>
-    </details>
-
-    <details>
-      <summary>How long does a typical project take?</summary>
-      <p>Small projects: 1–3 days; larger remodels vary by scope.</p>
-    </details>
-
-    <details>
-      <summary>Do you offer a warranty?</summary>
-      <p>Yes — on labor and manufacturer warranty on materials (details in your contract).</p>
-    </details>
-
-    <details>
-      <summary>What areas do you serve?</summary>
-      <p>Most of the Wasatch Front; call to confirm your city.</p>
-    </details>
-
-    <details>
-      <summary>Can you help with design?</summary>
-      <p>Absolutely — we help with layout, materials, and finishes.</p>
-    </details>
-  </div>
-</section>
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <div class="section-head">
-      <h2>Contact • Free Estimate</h2>
-      <p class="muted">Tell us about your project and we’ll reach out within 1 business day.</p>
-    </div>
-
-    <div class="grid-2">
-      <!-- Form -->
-      <form id="estimate-form" action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Full name *" required />
-        <input type="tel"  name="Phone" placeholder="Phone *" required />
-        <input class="full" type="email" name="Email" placeholder="Email *" required />
-        <input type="text" name="City" placeholder="City" />
-        <input type="text" name="Zip" placeholder="ZIP" />
-
-        <select name="Service" class="full" required>
-          <option value="">Service needed *</option>
-          <option>Tile</option>
-          <option>Flooring</option>
-          <option>Cabinets</option>
-          <option>Marble</option>
-          <option>Carpet</option>
-        </select>
-
-        <select name="Budget">
-          <option value="">Budget (optional)</option>
-          <option>$1k–$3k</option>
-          <option>$3k–$8k</option>
-          <option>$8k–$15k</option>
-          <option>$15k+</option>
-        </select>
-
-        <textarea class="full" name="Description" placeholder="Describe your project..."></textarea>
-        <button class="btn" type="submit">Send Request</button>
-      </form>
-
-      <!-- Contact card -->
+  <!-- ===== About ===== -->
+  <section id="about">
+    <div class="container grid-2">
+      <div>
+        <div class="section-head"><h2>About UT Contractor</h2></div>
+        <p>Craftsmanship you can count on: we deliver honest, reliable, clean work that lasts. Today, UT Contractor focuses on tile, flooring, cabinets, marble, and carpet across Utah homes and businesses.</p>
+        <p><strong>Badges:</strong> <span class="badge">Licensed & Insured</span> · <span class="badge">Warranty on Labor</span> · <span class="badge">Local Pros</span></p>
+      </div>
       <div class="contact-card">
-        <h3>Reach us</h3>
-        <p>📞 <a href="tel:13853479549">385-347-9549</a><br/>
-           ✉️ <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br/>
-           🌐 <a href="https://www.utcontr.com">www.utcontr.com</a><br/>
-           👍 Facebook: <a href="#" aria-label="UT Contractor on Facebook">UT Contractor</a></p>
-        <p><strong>Address</strong> (optional) • Wasatch Front, UT</p>
+        <h3>Service Area</h3>
+        <p>Salt Lake County · Utah County · Davis County · Weber County (call for other areas)</p>
+        <p><strong>Hours:</strong> Mon–Sat, 8am–6pm</p>
       </div>
     </div>
-  </div>
-</section>
-<!-- Link Hub -->
-<section class="link-hub">
-  <div class="container">
-    <div class="link-grid">
+  </section>
 
-      <div class="link-col">
-        <h3>Related services</h3>
-        <ul>
-          <li><a href="#services">Tile installation</a></li>
-          <li><a href="#services">Flooring (LVP, hardwood, laminate)</a></li>
-          <li><a href="#services">Cabinet install & refacing</a></li>
-          <li><a href="#services">Marble & stone</a></li>
-          <li><a href="#services">Carpet install & restretch</a></li>
-          <li><a href="#process">Subfloor leveling & prep</a></li>
-        </ul>
+  <!-- ===== FAQs ===== -->
+  <section id="faqs">
+    <div class="container">
+      <div class="section-head"><h2>FAQs</h2></div>
+
+      <div class="faq">
+        <details open>
+          <summary>Are estimates free?</summary>
+          <p>Yes — we’ll visit your home, measure, and send a written quote.</p>
+        </details>
+
+        <details>
+          <summary>How long does a typical project take?</summary>
+          <p>Small projects 1–3 days; larger remodels vary by scope.</p>
+        </details>
+
+        <details>
+          <summary>Do you offer a warranty?</summary>
+          <p>Yes — on labor and manufacturer warranty on materials (details in your contract).</p>
+        </details>
+
+        <details>
+          <summary>What areas do you serve?</summary>
+          <p>Most of the Wasatch Front; call to confirm your city.</p>
+        </details>
+
+        <details>
+          <summary>Can you help with design?</summary>
+          <p>Absolutely — we help with layout, materials, and finishes.</p>
+        </details>
       </div>
-
-      <div class="link-col">
-        <h3>Materials & finishes</h3>
-        <ul>
-          <li><a href="#gallery">Porcelain & ceramic tile</a></li>
-          <li><a href="#gallery">Natural stone (marble)</a></li>
-          <li><a href="#gallery">LVP / vinyl plank</a></li>
-          <li><a href="#gallery">Engineered hardwood</a></li>
-          <li><a href="#gallery">Carpet & padding</a></li>
-          <li><a href="#gallery">Cabinet hardware</a></li>
-        </ul>
-      </div>
-
-      <div class="link-col">
-        <h3>Rooms & spaces</h3>
-        <ul>
-          <li><a href="#gallery">Kitchens & backsplashes</a></li>
-          <li><a href="#gallery">Bathrooms & showers</a></li>
-          <li><a href="#gallery">Living rooms & stairs</a></li>
-          <li><a href="#gallery">Basements & rentals</a></li>
-          <li><a href="#gallery">Fireplaces & patios</a></li>
-          <li><a href="#gallery">Commercial spaces</a></li>
-        </ul>
-      </div>
-
-      <div class="link-col">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="#faqs">FAQs</a></li>
-          <li><a href="#process">Our process</a></li>
-          <li><a href="#reviews">Customer reviews</a></li>
-          <li><a href="#about">About us</a></li>
-          <li><a href="#contact">Get a free estimate</a></li>
-          <li><a href="tel:13853479549">Call 385-347-9549</a></li>
-        </ul>
-      </div>
-
     </div>
-  </div>
-</section>
-<!-- Service Areas (summary) -->
-<section id="service-areas">
-  <div class="container">
-    <div class="section-head">
-      <h2>Service Areas</h2>
-      <a class="btn luxe" href="locations.html">View all locations</a>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head"><h2>Contact</h2></div>
+
+      <div class="grid-2">
+        <!-- form -->
+        <form id="estimate-form" action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain">
+          <label>Full name *<input type="text" name="Name" required aria-required="true"></label>
+          <label>Phone *<input type="tel" name="Phone" required aria-required="true"></label>
+          <label class="full">Email *<input type="email" name="Email" required aria-required="true"></label>
+          <label>City<input type="text" name="City"></label>
+          <label>ZIP<input type="text" name="Zip"></label>
+
+          <label class="full">Service needed *
+            <select name="Service" required aria-required="true">
+              <option value="">Choose…</option>
+              <option>Tile</option>
+              <option>Flooring</option>
+              <option>Cabinets</option>
+              <option>Marble</option>
+              <option>Carpet</option>
+            </select>
+          </label>
+
+          <label>Budget
+            <select name="Budget">
+              <option value="">(optional)</option>
+              <option>$1k–$3k</option>
+              <option>$3k–$8k</option>
+              <option>$8k–$15k</option>
+              <option>$15k+</option>
+            </select>
+          </label>
+
+          <label class="full">Project details
+            <textarea name="Description" placeholder="Rooms, materials, timing…"></textarea>
+          </label>
+
+          <p class="help full">We’ll only use your info to respond to your request.</p>
+          <button class="btn" type="submit">Send Request</button>
+        </form>
+
+        <!-- Contact card -->
+        <div class="contact-card">
+          <h3>Reach us</h3>
+          <p>
+            <a href="tel:13853479549">385-347-9549</a><br>
+            <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
+            <a href="https://www.utcontr.com">www.utcontr.com</a><br>
+            Facebook: <a href="#" aria-label="UT Contractor on Facebook">UT Contractor</a>
+          </p>
+          <p><strong>Address</strong> (optional) · Wasatch Front, UT</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <p class="muted">We serve the Wasatch Front and beyond — Salt Lake City, West Valley City, Sandy, Draper, South Jordan, West Jordan, Herriman, Riverton, Millcreek, Murray, Taylorsville, Holladay, Bountiful, Layton, Ogden, Provo, Orem, Lehi, American Fork, Eagle Mountain, Saratoga Springs — and many more across Utah.</p>
-  </div>
-</section>
+  <!-- ===== Link Hub (Angi-style, no “Top cities”) ===== -->
+  <section class="link-hub">
+    <div class="container">
+      <div class="link-grid">
+        <div class="link-col">
+          <h3>Related services</h3>
+          <ul>
+            <li><a href="#services">Tile installation</a></li>
+            <li><a href="#services">Flooring (LVP, hardwood, laminate)</a></li>
+            <li><a href="#services">Cabinet install &amp; refacing</a></li>
+            <li><a href="#services">Marble &amp; stone</a></li>
+            <li><a href="#services">Carpet install &amp; restretch</a></li>
+            <li><a href="#process">Subfloor leveling &amp; prep</a></li>
+          </ul>
+        </div>
 
-  <!-- You can paste the rest of the sections later; for now this proves CSS is working -->
+        <div class="link-col">
+          <h3>Materials &amp; finishes</h3>
+          <ul>
+            <li><a href="#gallery">Porcelain &amp; ceramic tile</a></li>
+            <li><a href="#gallery">Natural stone (marble)</a></li>
+            <li><a href="#gallery">LVP / vinyl plank</a></li>
+            <li><a href="#gallery">Engineered hardwood</a></li>
+            <li><a href="#gallery">Carpet &amp; padding</a></li>
+            <li><a href="#gallery">Cabinet hardware</a></li>
+          </ul>
+        </div>
+
+        <div class="link-col">
+          <h3>Rooms &amp; spaces</h3>
+          <ul>
+            <li><a href="#gallery">Kitchens &amp; backsplashes</a></li>
+            <li><a href="#gallery">Bathrooms &amp; showers</a></li>
+            <li><a href="#gallery">Living rooms &amp; stairs</a></li>
+            <li><a href="#gallery">Basements &amp; rentals</a></li>
+            <li><a href="#gallery">Fireplaces &amp; patios</a></li>
+            <li><a href="#gallery">Commercial spaces</a></li>
+          </ul>
+        </div>
+
+        <div class="link-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#process">Our process</a></li>
+            <li><a href="#reviews">Customer reviews</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Get a free estimate</a></li>
+            <li><a href="tel:13853479549">Call 385-347-9549</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Service Areas (summary) ===== -->
+  <section id="service-areas">
+    <div class="container">
+      <div class="section-head">
+        <h2>Service Areas</h2>
+        <a class="btn luxe" href="locations.html">View all locations</a>
+      </div>
+      <p class="muted">We serve the Wasatch Front and beyond — Salt Lake City, West Valley City, Sandy, Draper, South Jordan, West Jordan, Herriman, Riverton, Millcreek, Murray, Taylorsville, Holladay, Bountiful, Layton, Ogden, Provo, Orem, Lehi, American Fork, Eagle Mountain, Saratoga Springs — and many more.</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
   <footer>
-    <div class="container copyright">
-      © <span id="year"></span> UT Contractor · Licensed & Insured · Wasatch Front, UT
+    <div class="container foot-grid">
+      <div>
+        <h3 style="color:#fff;margin-bottom:.4rem;">UT Contractor</h3>
+        <p>Tile • Flooring • Cabinets • Marble • Carpet.<br/>Serving the Wasatch Front, UT.</p>
+        <div class="badges">
+          <span class="badge">Licensed & Insured</span>
+          <span class="badge">Warranty on Labor</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Company</h4>
+        <p><a href="#home">Home</a><br><a href="#reviews">Reviews</a><br><a href="#faqs">FAQs</a></p>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Contact</h4>
+        <p><a href="tel:13853479549">385-347-9549</a><br>
+           <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
+           <a href="#contact">Free Estimate</a></p>
+      </div>
     </div>
+    <div class="copyright">© <span id="year"></span> UT Contractor · All rights reserved.</div>
   </footer>
+
 </body>
 </html>
