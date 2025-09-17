@@ -9,7 +9,7 @@
   <!-- Favicon / Brand -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-  <!-- Tailwind CSS (needed for flex, spacing, colors, etc.) -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Custom Styles -->
@@ -27,7 +27,9 @@
   <header class="flex items-center justify-between px-6 py-4 shadow bg-white sticky top-0 z-50">
     <!-- Left: Logo -->
     <div class="flex items-center">
-      <img src="images/logo.png" alt="UT Contractor Logo" class="h-14 w-auto">
+      <a href="#home">
+        <img src="images/logo.png" alt="UT Contractor Logo" class="h-14 w-auto">
+      </a>
     </div>
 
     <!-- Center: Nav Links -->
@@ -39,10 +41,9 @@
       <a href="#about" class="hover:text-blue-600">About Us</a>
     </nav>
 
-    <!-- Right: Call-to-Action (optional, remove if not needed) -->
-    <div class="hidden md:flex items-center space-x-4">
-      <a href="tel:13853479549" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Call Now</a>
-      <a href="sms:13853479549" class="bg-gray-200 text-gray-900 px-4 py-2 rounded hover:bg-gray-300">Text Us</a>
+    <!-- Right: Contact Us -->
+    <div class="hidden md:flex items-center">
+      <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Contact Us</a>
     </div>
   </header>
 
@@ -53,13 +54,21 @@
     <a href="#reviews">Reviews</a>
     <a href="#projects">Projects</a>
     <a href="#about">About Us</a>
+    <a href="#contact" class="font-semibold text-blue-600">Contact Us</a>
   </nav>
 
   <!-- ===== Hero ===== -->
   <section id="home" class="hero hero-photo bg-gradient-to-r from-blue-500 to-blue-700 text-white py-24">
-    <div class="max-w-2xl mx-auto text-center bg-white/80 text-gray-900 p-8 rounded-lg shadow">
-      <h1 class="text-3xl font-bold mb-4">Welcome to UT Contractor</h1>
+    <div class="max-w-2xl mx-auto text-center bg-white/90 text-gray-900 p-8 rounded-lg shadow space-y-6">
+      <h1 class="text-3xl font-bold">Welcome to UT Contractor</h1>
       <p class="text-lg">We satisfy you with our work and our word — clean craftsmanship, clear timelines, and results you’ll love.</p>
+
+      <!-- New Inner Box -->
+      <div class="mt-6">
+        <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-700">
+          Get a Free Quote
+        </a>
+      </div>
     </div>
   </section>
 
