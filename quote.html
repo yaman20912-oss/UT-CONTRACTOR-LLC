@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get a Free Quote | UT Contractor</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#2082d3"
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="px-6 py-4 shadow bg-white">
+    <a href="index.html">
+      <img src="images/logo.png" alt="UT Contractor Logo" class="h-12 w-auto">
+    </a>
+  </header>
+
+  <!-- Quote Form -->
+  <main class="max-w-2xl mx-auto mt-12 bg-white p-8 rounded-lg shadow">
+    <h1 class="text-2xl font-bold text-center mb-6 text-brand">Request Your Free Quote</h1>
+
+    <form action="mailto:Utcontr@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+      <label class="block">Full Name *
+        <input type="text" name="Name" required class="w-full border p-2 rounded">
+      </label>
+
+      <label class="block">Phone Number *
+        <input type="tel" name="Phone" required class="w-full border p-2 rounded">
+      </label>
+
+      <label class="block">Email Address *
+        <input type="email" name="Email" required class="w-full border p-2 rounded">
+      </label>
+
+      <label class="block">Service Needed *
+        <select name="Service" required class="w-full border p-2 rounded">
+          <option value="">Choose…</option>
+          <option>Tile</option>
+          <option>Flooring</option>
+          <option>Cabinets</option>
+          <option>Marble</option>
+          <option>Carpet</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <div class="grid grid-cols-2 gap-4">
+        <label class="block">City
+          <input type="text" name="City" class="w-full border p-2 rounded">
+        </label>
+        <label class="block">ZIP
+          <input type="text" name="Zip" class="w-full border p-2 rounded">
+        </label>
+      </div>
+
+      <label class="block">Budget (optional)
+        <select name="Budget" class="w-full border p-2 rounded">
+          <option value="">(optional)</option>
+          <option>$1k–$3k</option>
+          <option>$3k–$8k</option>
+          <option>$8k–$15k</option>
+          <option>$15k+</option>
+        </select>
+      </label>
+
+      <label class="block">Project Details *
+        <textarea name="Description" required placeholder="Describe the work you need done (rooms, materials, timeline…)" class="w-full border p-2 rounded h-32"></textarea>
+      </label>
+
+      <fieldset>
+        <legend class="font-semibold">Preferred Contact Method *</legend>
+        <div class="flex space-x-4 mt-2">
+          <label><input type="radio" name="ContactMethod" value="Phone" required> Phone</label>
+          <label><input type="radio" name="ContactMethod" value="Email"> Email</label>
+          <label><input type="radio" name="ContactMethod" value="Text"> Text</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:bg-blue-800">
+        Submit Request
+      </button>
+    </form>
+  </main>
+
+  <footer class="text-center text-sm mt-12 mb-6 text-gray-500">
+    © <span id="year"></span> UT Contractor · All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
