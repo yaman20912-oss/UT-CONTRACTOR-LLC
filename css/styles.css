@@ -85,3 +85,55 @@ footer a{color:#E6F2FF}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr}}
 .copyright{border-top:1px solid #1e293b;padding:.9rem 0;color:#9fb5cc}
 #service-areas{border-top:1px solid var(--border);background:#fff}
+/* === Clean Luxe Hero === */
+:root{
+  --hero-image: url("../assets/hero.jpg"); /* change if you use another path/name */
+}
+
+.hero-photo{
+  min-height: clamp(520px, 85vh, 820px);
+  background:
+    linear-gradient(0deg, rgba(15,23,42,.45), rgba(15,23,42,.45)), /* dark overlay for readability */
+    var(--hero-image) center/cover no-repeat;
+  display:grid; place-items:center; text-align:center; color:#fff; padding:4vw 2rem;
+}
+
+/* Center card */
+.hero-card{
+  width:min(900px,92%); 
+  background:rgba(255,255,255,.92);
+  color:var(--ink);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 24px 60px rgba(2,40,84,.20);
+  padding:clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 4vw, 2.4rem);
+  backdrop-filter:saturate(160%) blur(2px);
+}
+.hero-card h1{
+  font-family:"Playfair Display",serif; 
+  font-size:clamp(1.8rem, 3.2vw, 2.6rem);
+  margin:0 0 .4rem; color:var(--ink);
+}
+.hero-card p{
+  margin:.25rem auto 1rem; 
+  color:#334155; 
+  max-width:60ch;
+}
+.hero-card .actions{display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap}
+
+/* Buttons (keep your brand blue) */
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:.75rem 1.1rem;border-radius:.6rem;font-weight:700;box-shadow:0 8px 20px rgba(2,40,84,.15)}
+.btn:hover{background:var(--brand-700)}
+.btn.ghost{background:#fff;color:var(--brand);border:1px solid var(--brand);box-shadow:none}
+.btn.ghost:hover{background:var(--brand-50)}
+
+/* Header polish + no bullets */
+nav ul{list-style:none;display:flex;gap:1.1rem;margin:0;padding:0}
+.menu-btn{display:none}
+@media (max-width:900px){
+  nav ul{display:none}
+  .menu-btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.5rem .75rem;border-radius:.5rem;background:#fff}
+  .mobile{display:none;background:#fff;border-top:1px solid var(--border)}
+  .mobile.open{display:block}
+  .mobile a{display:block;padding:1rem;border-top:1px solid var(--border);color:var(--ink);font-weight:600}
+}
