@@ -133,46 +133,62 @@
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer id="footer" class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-2">
+  <footer id="footer" class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
       
       <!-- Column 1: Company Info -->
       <div>
-        <h3 class="font-bold mb-2">UT Contractor</h3>
-        <p>Tile • Flooring • Cabinets • Marble • Carpet<br>Serving the Wasatch Front, UT.</p>
+        <h3 class="font-bold text-white mb-3">UT Contractor</h3>
+        <p class="text-sm">
+          Tile • Flooring • Cabinets • Marble • Carpet<br>
+          Licensed & Insured · Serving the Wasatch Front, UT
+        </p>
       </div>
       
       <!-- Column 2: Quick Links -->
       <div>
-        <h4 class="font-semibold mb-2">Quick Links</h4>
-        <p><a href="#home">Home</a><br>
-           <a href="#services">Services</a><br>
-           <a href="#reviews">Reviews</a></p>
+        <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#home" class="hover:text-brand">Home</a></li>
+          <li><a href="#services" class="hover:text-brand">Services</a></li>
+          <li><a href="#reviews" class="hover:text-brand">Reviews</a></li>
+          <li><a href="#projects" class="hover:text-brand">Projects</a></li>
+          <li><a href="#about" class="hover:text-brand">About Us</a></li>
+        </ul>
       </div>
 
-      <!-- Column 3: Contact Info -->
+      <!-- Column 3: Contact + Hours -->
       <div>
-        <h4 class="font-semibold mb-2">Contact</h4>
-        <p><a href="tel:13853479549" class="hover:underline">385-347-9549</a><br>
-           <a href="mailto:Utcontr@gmail.com" class="hover:underline">Utcontr@gmail.com</a></p>
+        <h4 class="font-semibold text-white mb-3">Contact</h4>
+        <p class="text-sm">
+          <a href="tel:13853479549" class="hover:text-brand">385-347-9549</a><br>
+          <a href="mailto:Utcontr@gmail.com" class="hover:text-brand">Utcontr@gmail.com</a>
+        </p>
+        <h4 class="font-semibold text-white mt-5 mb-2">Hours</h4>
+        <p class="text-sm">
+          Mon–Fri: 8:00 AM – 6:00 PM<br>
+          Sat: 9:00 AM – 3:00 PM<br>
+          Sun: Closed
+        </p>
       </div>
       
-      <!-- Column 4: Hours -->
+      <!-- Column 4: Follow Us -->
       <div>
-        <h4 class="font-semibold mb-2">Hours</h4>
-        <p>Mon–Fri: 8:00 AM – 6:00 PM<br>
-           Sat: 9:00 AM – 3:00 PM<br>
-           Sun: Closed</p>
-      </div>
-      
-      <!-- Column 5: Follow Us -->
-      <div>
-        <h4 class="font-semibold mb-2">Follow Us</h4>
-        <p>Social links coming soon</p>
+        <h4 class="font-semibold text-white mb-3">Follow Us</h4>
+        <p class="text-sm">Social links coming soon</p>
+        <!-- Example for future: 
+        <div class="flex space-x-4 mt-2">
+          <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="h-5 w-5"></a>
+          <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="h-5 w-5"></a>
+          <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5"></a>
+        </div>
+        -->
       </div>
       
     </div>
-    <p class="text-center text-sm mt-6">© <span id="year"></span> UT Contractor · All rights reserved.</p>
+    <p class="text-center text-xs text-gray-500 mt-10">
+      © <span id="year"></span> UT Contractor · All rights reserved.
+    </p>
   </footer>
 
   <script>
