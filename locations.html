@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Service Areas • UT Contractor</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+  <style>
+    .locations-hero{padding:3rem 0;background:linear-gradient(180deg,var(--brand) 0,var(--brand-700) 100%);color:#fff}
+    .searchbar{display:flex;gap:.5rem;margin:1rem 0 2rem}
+    .searchbar input{flex:1;padding:.85rem 1rem;border:1px solid var(--border);border-radius:10px}
+    .accordion details{margin-bottom:.6rem}
+    .count{color:var(--muted);font-size:.9rem;margin-left:.35rem}
+    .pill{display:inline-block;background:#f7f8fb;border:1px solid var(--border);border-radius:999px;padding:.35rem .6rem;margin:.25rem .35rem .25rem 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="./">
+        <div class="brand__logo">UT</div>
+        <div class="brand__name">UT Contractor</div>
+      </a>
+      <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false">☰ Menu</button>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="./#services">Services</a></li>
+          <li><a href="./#gallery">Gallery</a></li>
+          <li><a href="./#reviews">Reviews</a></li>
+          <li><a href="./#about">About</a></li>
+          <li><a class="btn" href="./#contact">Free Estimate</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav id="mobile-nav" class="mobile" aria-label="Mobile">
+      <a href="./#services">Services</a>
+      <a href="./#gallery">Gallery</a>
+      <a href="./#reviews">Reviews</a>
+      <a href="./#about">About</a>
+      <a href="./#contact">Free Estimate</a>
+    </nav>
+  </header>
+
+  <section class="locations-hero">
+    <div class="container">
+      <span class="kicker">Utah • Statewide Service</span>
+      <h1 style="color:#fff">Service Areas</h1>
+      <p style="color:#E6F3FF">Search or browse by county. We cover the Wasatch Front and communities across Utah.</p>
+      <div class="searchbar">
+        <input id="loc-search" placeholder="Search a city or town (e.g., Millcreek, Ogden, Heber)…" aria-label="Search cities and towns">
+      </div>
+      <div class="badges"><span class="badge">Licensed & Insured</span><span class="badge">Free Estimates</span><span class="badge">30+ Years</span></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="search-results" style="display:none;margin:1rem 0 2rem;"></div>
+
+    <div class="section-head"><h2>Browse by County</h2></div>
+    <div class="accordion" id="counties"></div>
+
+    <p class="help">Sources for Utah counties & municipalities: Utah.gov City & County Government; Utah League of Cities & Towns; Utah State Tax Commission list of all cities & towns (by county). :contentReference[oaicite:4]{index=4}</p>
+  </main>
+
+  <footer>
+    <div class="container foot-grid">
+      <div>
+        <h3 style="color:#fff;margin-bottom:.4rem;">UT Contractor</h3>
+        <p>Tile • Flooring • Cabinets • Marble • Carpet.<br/>Serving the Wasatch Front, UT.</p>
+        <div class="badges"><span class="badge">Licensed & Insured</span><span class="badge">Warranty on Labor</span></div>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Company</h4>
+        <p><a href="./#about">About</a><br><a href="./#reviews">Reviews</a><br><a href="./#faqs">FAQs</a></p>
+      </div>
+      <div>
+        <h4 style="color:#fff;margin:.2rem 0 .4rem;">Contact</h4>
+        <p><a href="tel:13853479549">385-347-9549</a><br>
+           <a href="mailto:Utcontr@gmail.com">Utcontr@gmail.com</a><br>
+           <a href="./#contact">Free Estimate</a></p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> UT Contractor · All rights reserved.</div>
+  </footer>
+
+  <script>
+  // ----- DATA: counties -> municipalities (starter; expand freely) -----
+  // Use the Utah State Tax Commission PDF to complete every town under each county (format below). :contentReference[oaicite:5]{index=5}
+  const DATA = {
+    "Salt Lake": ["Salt Lake City","West Valley City","Sandy","West Jordan","South Jordan","Riverton","Herriman","Draper","Murray","Taylorsville","Holladay","Millcreek","Cottonwood Heights","Midvale","South Salt Lake","Magna","Kearns"],
+    "Utah": ["Provo","Orem","Lehi","American Fork","Pleasant Grove","Lindon","Cedar Hills","Alpine","Highland","Saratoga Springs","Eagle Mountain","Vineyard","Payson","Spanish Fork","Springville","Mapleton","Woodland Hills"],
+    "Davis": ["Layton","Bountiful","Kaysville","Clearfield","Syracuse","Clinton","Farmington","Woods Cross","North Salt Lake","West Point","Centerville","Fruit Heights","Sunset","South Weber"],
+    "Weber": ["Ogden","Roy","North Ogden","South Ogden","Riverdale","West Haven","Hooper","Harrisville","Pleasant View","Farr West","Marriott-Slaterville","Uintah","Washington Terrace","Plain City"],
+    "Washington": ["St. George","Washington","Hurricane","Ivins","Santa Clara","La Verkin","Toquerville","Leeds","Springdale"],
+    "Cache": ["Logan","North Logan","Providence","Hyde Park","Smithfield","Hyrum","Nibley","Millville","Richmond","Lewiston","Mendon","Newton","Clarkston","Trenton","Cornish","Avon (uninc.)"],
+    "Box Elder": ["Brigham City","Tremonton","Garland","Willard","Perry","Corinne","Honeyville","Deweyville","Fielding","Elwood","Portage","Snowville","Mantua","Bothwell (uninc.)"],
+    "Tooele": ["Tooele","Grantsville","Stansbury Park","Lake Point","Stockton","Vernon","Ophir"],
+    "Summit": ["Park City","Coalville","Kamas","Henefer","Francis","Oakley","Samak (uninc.)"],
+    "Wasatch": ["Heber City","Midway","Charleston","Daniel","Hideout","Interlaken","Wallsburg"],
+    "Morgan": ["Morgan","Enterprise (uninc.)","Mountain Green (uninc.)"],
+    "Juab": ["Nephi","Eureka","Mona","Levan"],
+    "Sanpete": ["Ephraim","Manti","Mt. Pleasant","Fountain Green","Moroni","Fairview","Gunnison","Spring City","Sterling","Wales","Centerfield","Mayfield"],
+    "Sevier": ["Richfield","Salina","Monroe","Aurora","Annabella","Glenwood","Joseph","Koosharem","Sigurd"],
+    "Millard": ["Fillmore","Delta","Hinckley","Holden","Kanosh","Leamington","Lynndyl","Oak City","Scipio"],
+    "Iron": ["Cedar City","Enoch","Parowan","Brian Head","Paragonah","Kanarraville"],
+    "Beaver": ["Beaver","Milford","Minersville"],
+    "Garfield": ["Panguitch","Bryce Canyon City","Antimony","Boulder","Cannonville","Escalante","Hatch","Henrieville","Tropic"],
+    "Kane": ["Kanab","Alton","Big Water","Fredonia (AZ) nearby","Orderville"],
+    "Piute": ["Junction","Circleville","Kingston","Marysvale"],
+    "Wayne": ["Bicknell","Loa","Lyman","Torrey","Teasdale (uninc.)"],
+    "Emery": ["Castle Dale","Huntington","Orangeville","Ferron","Emery","Elmo","Clawson","Green River (part)"],
+    "Carbon": ["Price","Helper","Wellington","East Carbon","Scofield","Sunnyside (part)"],
+    "Grand": ["Moab","Castle Valley"],
+    "Daggett": ["Manila","Dutch John"],
+    "Duchesne": ["Duchesne","Roosevelt","Myton","Altamont","Talmage (uninc.)"],
+    "Uintah": ["Vernal","Naples","Maeser (uninc.)","Ballard"],
+    "San Juan": ["Blanding","Monticello","Bluff"],
+    "Rich": ["Garden City","Laketown","Randolph","Woodruff"]
+  };
+
+  // ----- Render: counties accordion -----
+  const container = document.getElementById('counties');
+  Object.keys(DATA).sort().forEach(county=>{
+    const list = DATA[county].sort();
+    const d = document.createElement('details');
+    d.innerHTML = `<summary><strong>${county} County</strong> <span class="count">(${list.length})</span></summary>
+      <div class="list">${list.map(n=>`<span class="pill">${n}</span>`).join('')}</div>`;
+    container.appendChild(d);
+  });
+
+  // ----- Search -----
+  const search = document.getElementById('loc-search');
+  const results = document.getElementById('search-results');
+  search.addEventListener('input', ()=>{
+    const q = search.value.trim().toLowerCase();
+    if(!q){ results.style.display='none'; results.innerHTML=''; return; }
+    let hits=[];
+    for(const [county, towns] of Object.entries(DATA)){
+      for(const t of towns){
+        if(t.toLowerCase().includes(q)){
+          hits.push({name:t, county});
+        }
+      }
+    }
+    results.style.display='block';
+    results.innerHTML = hits.length
+      ? `<div class="card"><strong>Matches:</strong> ${hits.map(h=>`<span class="pill">${h.name} — ${h.county}</span>`).join(' ')}</div>`
+      : `<div class="card">No results yet. Try another spelling.</div>`;
+  });
+  </script>
+</body>
+</html>
