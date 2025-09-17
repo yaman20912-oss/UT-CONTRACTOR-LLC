@@ -1,13 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
   <style>
-    .mark { fill: #2082D3; }
-    .text { fill: #0F172A; font: 800 72px 'Montserrat', Arial, sans-serif; }
-    .sub  { fill: #334155; font: 500 26px 'Inter', Arial, sans-serif; }
+    .blue { fill: #2082D3; stroke: #2082D3; stroke-width: 6; }
+    .u { font: 700 220px 'Times New Roman', serif; fill: #2082D3; }
+    .t { font: 700 160px 'Times New Roman', serif; fill: #2082D3; }
+    .contractor { font: 700 56px 'Times New Roman', serif; fill: #000000; }
   </style>
-  <g transform="translate(0,0)">
-    <rect class="mark" x="0" y="20" width="180" height="180" rx="28" ry="28"/>
-    <text x="36" y="150" fill="#ffffff" style="font: 800 96px 'Montserrat', Arial, sans-serif;">UT</text>
-  </g>
-  <text class="text" x="210" y="110">UT Contractor</text>
-  <text class="sub"  x="210" y="152">Tile • Flooring • Cabinets • Marble • Carpet</text>
+
+  <!-- House outline -->
+  <path class="blue" d="M100 300 L300 100 L500 300 L500 200 L440 200 L440 140 L500 140 L500 300" fill="none"/>
+
+  <!-- Big U -->
+  <text class="u" x="190" y="450">U</text>
+
+  <!-- T centered inside -->
+  <text class="t" x="240" y="300">T</text>
+
+  <!-- Contractor text -->
+  <text class="contractor" x="180" y="540">Contractor</text>
 </svg>
