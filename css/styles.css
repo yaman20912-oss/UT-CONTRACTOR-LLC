@@ -84,3 +84,4 @@ footer a{color:#E6F2FF}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;padding:2rem 0}
 @media (max-width:900px){.foot-grid{grid-template-columns:1fr}}
 .copyright{border-top:1px solid #1e293b;padding:.9rem 0;color:#9fb5cc}
+#service-areas{border-top:1px solid var(--border);background:#fff}
