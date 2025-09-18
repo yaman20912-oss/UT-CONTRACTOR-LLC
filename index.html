@@ -6,68 +6,24 @@
   <title>UT Contractor • Tile • Flooring • Cabinets • Marble • Carpet</title>
   <meta name="description" content="UT Contractor — Licensed & insured contractor offering tile, flooring, cabinets, marble, and carpet services across the Wasatch Front, UT. Free estimates." />
 
-  <!-- ===== HEADER (clean & luxe) ===== -->
-<header class="site-header">
-  <div class="container nav">
-    <!-- Logo (left) -->
-    <a class="brand" href="./" aria-label="UT Contractor">
-      <!-- Use your horizontal wordmark file -->
-      <img src="assets/logo-wordmark.svg" alt="UT Contractor" height="38">
-    </a>
-
-    <!-- Mobile menu button -->
-    <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">☰ Menu</button>
-
-    <!-- Desktop nav -->
-    <nav class="primary" aria-label="Main">
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Images</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
-      <a class="btn nav-cta" href="#contact">Contact Us</a>
+   <!-- ===== Header ===== -->
+  <header class="flex items-center justify-between px-6 py-4 shadow bg-white sticky top-0 z-50">
+    <div>
+      <a href="index.html"><img src="images/logo.png" alt="UT Contractor Logo" class="h-14 w-auto"></a>
+    </div>
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="#home" class="hover:text-brand">Home</a>
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#reviews" class="hover:text-brand">Reviews</a>
+      <a href="#areas" class="hover:text-brand">Areas</a>
+      <a href="#about" class="hover:text-brand">About Us</a>
     </nav>
-  </div>
-
-  <!-- Mobile nav (shown when the button is tapped) -->
-  <nav id="mobile-nav" class="mobile" aria-label="Mobile" aria-hidden="true">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Images</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#about">About</a>
-    <a href="#faqs">FAQs</a>
-    <a class="btn" href="#contact">Contact Us</a>
-  </nav>
-</header>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: "#2082d3",
-            brandDark: "#1769b5"
-          },
-          fontFamily: {
-            playfair: ["Playfair Display", "serif"],
-            inter: ["Inter", "sans-serif"]
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="font-inter text-gray-900">
-
+    <div>
+      <a href="#footer" class="bg-brand text-white px-4 py-2 rounded hover:bg-brandDark">Contact Us</a>
+    </div>
+  </header>
+  
   <!-- ===== Hero ===== -->
   <section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
     style="background-image: url('images/hero-bathroom.jpg'); background-size: cover; background-position: center;">
