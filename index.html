@@ -36,11 +36,11 @@
     
     <!-- Logo -->
     <a href="#home" class="flex items-center space-x-2">
-      <img src="images/logo-wordmark.svg" alt="UT Contractor " class="h-10">
+      <img src="images/logo-wordmark.svg" alt="UT Contractor Logo" class="h-10">
     </a>
 
-    <!-- Navigation Links -->
-    <nav class="hidden md:flex space-x-8 font-medium text-gray-800">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-10 font-medium text-gray-800">
       <a href="#home" class="hover:text-brand">Home</a>
       <a href="#services" class="hover:text-brand">Services</a>
       <a href="#projects" class="hover:text-brand">Projects</a>
@@ -49,18 +49,50 @@
       <a href="#about" class="hover:text-brand">About Us</a>
     </nav>
 
-    <!-- Contact (Phone + Button) -->
-    <div class="flex items-center space-x-4">
-      <span class="hidden md:inline-block text-brand font-semibold">
-        📞 (555) 123-4567
-      </span>
+    <!-- Contact + Estimate (Desktop) -->
+    <div class="hidden md:flex items-center space-x-4">
+      <span class="text-brand font-semibold">📞 (555) 123-4567</span>
       <a href="quote.html" 
          class="bg-brand hover:bg-brandDark text-white px-4 py-2 rounded-lg font-semibold shadow transition">
         Get a Free Estimate
       </a>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <button @click="open = !open" class="md:hidden text-gray-800 focus:outline-none">
+      <!-- Hamburger Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div x-show="open" class="md:hidden bg-white shadow-md">
+    <nav class="flex flex-col space-y-4 p-6 font-medium text-gray-800">
+      <a href="#home" class="hover:text-brand">Home</a>
+      <a href="#services" class="hover:text-brand">Services</a>
+      <a href="#projects" class="hover:text-brand">Projects</a>
+      <a href="#reviews" class="hover:text-brand">Reviews</a>
+      <a href="#areas" class="hover:text-brand">Areas</a>
+      <a href="#about" class="hover:text-brand">About Us</a>
+      <hr>
+      <a href="tel:5551234567" class="text-brand font-semibold">📞 (555) 123-4567</a>
+      <a href="quote.html" 
+         class="bg-brand hover:bg-brandDark text-white px-4 py-2 rounded-lg font-semibold shadow transition text-center">
+        Get a Free Estimate
+      </a>
+    </nav>
   </div>
 </header>
+
+<!-- Alpine.js for Menu Toggle -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('menu', () => ({ open: false }))
+  })
+</script>
   
 <!-- ===== Hero ===== -->
 <section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
