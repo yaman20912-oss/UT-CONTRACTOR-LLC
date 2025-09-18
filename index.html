@@ -30,24 +30,30 @@
 </head>
 <body class="font-inter text-gray-900">
 
-  <!-- ===== Header ===== -->
-  <header class="flex items-Left justify-between px-6 py-4 shadow bg-white sticky top-0 z-50">
-    <div>
-      <a href="index.html"><img src="images/logo.png" alt="UT Contractor Logo" class="h-14 w-auto"></a>
-    </div>
-    <nav class="hidden md:flex space-x-6 font-medium">
-      <a href="#home" class="hover:text-brand">Home</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#projects" class="hover:text-brand">Projects</a>
-      <a href="#reviews" class="hover:text-brand">Reviews</a>
-      <a href="#areas" class="hover:text-brand">Areas</a>
-      <a href="#about" class="hover:text-brand">About Us</a>
-    </nav>
-    <div>
-      <a href="#footer" class="bg-brand text-white px-4 py-2 rounded hover:bg-brandDark">Contact Us</a>
-    </div>
-  </header>
+/* ===== Top Bar / Header ===== */
+    .topbar{background:var(--brand);color:#fff}
+    .topbar .container{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem 0}
+    .topbar a{color:#fff}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.6rem}
+    .brand__logo{width:42px;height:42px;background:var(--brand);border-radius:.6rem;display:grid;place-items:center;color:#fff;font-weight:800;font-family:Montserrat}
+    .brand__name{font-weight:800;font-family:Montserrat;letter-spacing:.2px}
+    nav ul{list-style:none;display:flex;gap:1.1rem;margin:0;padding:0}
+    nav a{color:var(--ink);font-weight:600}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.75rem 1rem;border-radius:.6rem;font-weight:700}
+    .btn:hover{background:var(--brand-700)}
+    .ghost{background:transparent;border:1px solid var(--brand);color:var(--brand)}
+    .ghost:hover{background:var(--brand-50)}
+    .menu-btn{display:none}
 
+    @media (max-width:900px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.5rem .75rem;border-radius:.5rem;background:#fff}
+      .mobile{display:none;background:#fff;border-bottom:1px solid var(--border)}
+      .mobile.open{display:block}
+      .mobile a{display:block;padding:1rem;border-top:1px solid var(--border);color:var(--ink);font-weight:600}
+    }
   <!-- ===== Hero ===== -->
   <section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
     style="background-image: url('images/hero-bathroom.jpg'); background-size: cover; background-position: center;">
