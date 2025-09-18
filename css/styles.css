@@ -201,10 +201,17 @@ h2 { font-weight: 600; margin: .2rem 0; }
    Hero Section
 --------------------------------- */
 #home {
-  background-image: url('images/hero-bathroom.jpg');
-  background-size: cover; background-position: center;
-  background-repeat: no-repeat; background-attachment: fixed;
-  min-height: 100vh; position: relative;
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  /* Background image + dark overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../images/hero-bathroom.jpg') center/cover no-repeat;
 }
 .hero-photo {
   min-height: clamp(520px, 85vh, 820px);
