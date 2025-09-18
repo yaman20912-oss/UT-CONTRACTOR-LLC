@@ -1,13 +1,10 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UT Contractor • Tile • Flooring • Cabinets • Marble • Carpet</title>
   <meta name="description" content="UT Contractor — Licensed & insured contractor offering tile, flooring, cabinets, marble, and carpet services across the Wasatch Front, UT. Free estimates." />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,9 +13,9 @@
       theme: {
         extend: {
           colors: {
-            brand: "#345B81",
-            brandDark: "#274566",
-            lightbg: "#F8F5F1"
+            brand: "#345B81",       /* deep blue */
+            brandDark: "#274566",   /* darker hover blue */
+            lightbg: "#F8F5F1"      /* off-white */
           },
           fontFamily: {
             inter: ["Inter", "sans-serif"],
@@ -42,22 +39,19 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       <!-- Logo -->
       <a href="#home" class="flex items-center space-x-2">
-        <img src="assets/logo-wordmark.svg" alt="UT Contractor logo" class="h-10 w-auto">
+        <img src="assets/logo-wordmark.svg" alt="UT Contractor Logo" class="h-10 w-auto">
       </a>
-
       <!-- Nav -->
-      <nav aria-label="Primary" class="absolute left-1/2 -translate-x-1/2 hidden md:flex space-x-8 font-medium text-gray-800">
+      <nav class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-8 font-medium text-gray-800">
         <a href="#services" class="hover:text-brand">Services</a>
         <a href="#projects" class="hover:text-brand">Projects</a>
         <a href="#reviews" class="hover:text-brand">Reviews</a>
         <a href="#areas" class="hover:text-brand">Areas</a>
         <a href="#about" class="hover:text-brand">About Us</a>
-        <a href="#contact" class="hover:text-brand">Contact</a>
       </nav>
-
-      <!-- Phone + CTA -->
+      <!-- Contact + CTA -->
       <div class="flex items-center space-x-4">
-        <a href="tel:+13853479549" class="text-brand font-semibold">(385) 347-9549</a>
+        <a href="tel:+13853479549" class="text-brand font-semibold">385-347-9549</a>
         <a href="#contact" class="bg-brand hover:bg-brandDark text-lightbg px-4 py-2 rounded-lg shadow font-semibold">
           Get a Free Estimate
         </a>
@@ -65,213 +59,186 @@
     </div>
   </header>
 
-  <main id="main">
-    <!-- ===== Hero ===== -->
-    <section id="home" class="relative flex items-center justify-center text-center text-white min-h-screen"
-      style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('assets/hero-bathroom.jpg') center/cover no-repeat;">
-      <div class="relative z-10 max-w-3xl px-4">
-        <h1 class="text-5xl md:text-6xl font-playfair font-bold leading-tight">
-          Transforming Utah Homes for Over 30 Years
-        </h1>
-        <p class="mt-4 text-lg md:text-xl">Expert Tile • Flooring • Cabinets • Marble • Carpet</p>
-        <p class="mt-1 text-lg md:text-xl">Licensed • Insured • Trusted Utah Contractor</p>
-        <a href="#contact" class="mt-8 inline-block bg-brand hover:bg-brandDark text-lightbg px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
-          Get a Free Estimate
-        </a>
-      </div>
-    </section>
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="relative flex items-center justify-center text-center text-white min-h-screen"
+    style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('images/hero-bathroom.jpg') center/cover no-repeat;">
+    <div class="relative z-10 max-w-3xl px-4">
+      <h1 class="text-5xl md:text-6xl font-playfair font-bold leading-tight">
+        Transforming Utah Homes for Over 30 Years
+      </h1>
+      <p class="mt-4 text-lg md:text-xl">Expert Tile • Flooring • Cabinets • Marble • Carpet</p>
+      <p class="mt-1 text-lg md:text-xl">Licensed • Insured • Trusted Utah Contractor</p>
+      <a href="#contact" class="mt-8 inline-block bg-brand hover:bg-brandDark text-lightbg px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
+        Get a Free Estimate
+      </a>
+    </div>
+  </section>
 
-    <!-- ===== Services ===== -->
-    <section id="services" class="scroll-mt-24 bg-lightbg py-16 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">Our Services</h2>
-        <p class="text-gray-700 max-w-2xl mx-auto mb-12">
-          Trusted contracting solutions across Utah — from floors to cabinets, we bring 30 years of expertise to every project.
-        </p>
-      </div>
-
-      <!-- Services Grid -->
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-        <!-- Example Card -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
-          <img src="assets/tile.jpg" alt="Tile installation" class="h-56 w-full object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-brand mb-2">Tile Installation</h3>
-            <p class="text-gray-600 mb-4">Transform kitchens, bathrooms, and floors with durable, stylish tile work.</p>
-            <a href="#contact" class="inline-block text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
-          </div>
-        </div>
-        <!-- Add your other service cards here -->
-      </div>
-    </section>
-
-    <!-- ===== About Us ===== -->
-    <section id="about" class="scroll-mt-24 bg-white py-20 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="assets/about-team.jpg" alt="UT Contractor team" class="rounded-2xl shadow-lg">
-        </div>
-        <div>
-          <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-6">About Us</h2>
-          <p class="text-gray-700 mb-6">For over 30 years, UT Contractor has been transforming homes across Utah with expert craftsmanship.</p>
-          <ul class="space-y-3 text-gray-700 mb-8">
-            <li>✔️ Licensed & Insured</li>
-            <li>✔️ 30+ Years of Experience</li>
-            <li>✔️ Free In-Home Estimates</li>
-            <li>✔️ Quality Workmanship</li>
-          </ul>
-          <a href="#contact" class="inline-block bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">Get Your Free Estimate</a>
+  <!-- ===== Services Section ===== -->
+  <section id="services" class="bg-lightbg py-16 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">Our Services</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto mb-12">Trusted contracting solutions across Utah — from floors to cabinets, we bring 30 years of expertise to every project.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      <!-- Repeat service cards -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/tile.jpg" alt="Tile installation" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand mb-2">Tile Installation</h3>
+          <p class="text-gray-600 mb-4">Transform kitchens, bathrooms, and floors with durable, stylish tile work. We handle design, installation, and finishing.</p>
+          <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
         </div>
       </div>
-    </section>
-
-    <!-- ===== Projects ===== -->
-    <section id="projects" class="scroll-mt-24 bg-lightbg py-20 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">Our Projects</h2>
-        <p class="text-gray-700 max-w-2xl mx-auto mb-12">A showcase of our recent tile, flooring, and cabinet installations.</p>
-      </div>
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-        <!-- project cards -->
-      </div>
-      <div class="text-center mt-16">
-        <p class="text-lg text-gray-700 mb-6">Love what you see?</p>
-        <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-8 py-3 rounded-xl text-lg font-semibold shadow">Get a Free Estimate</a>
-      </div>
-    </section>
-
-    <!-- ===== Reviews ===== -->
-    <section id="reviews" class="scroll-mt-24 bg-white py-20 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">What Our Customers Say</h2>
-        <p class="text-gray-700 max-w-2xl mx-auto">We’re proud to earn the trust of homeowners across Utah.</p>
-      </div>
-
-      <!-- Swiper Container -->
-      <div class="swiper max-w-4xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
-            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
-            <p class="text-gray-700 mb-4">“UT Contractor completely transformed our kitchen. The tile work is flawless.”</p>
-            <p class="font-semibold text-brand">— Sarah L.</p>
-          </div>
-          <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
-            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
-            <p class="text-gray-700 mb-4">“We love our new hardwood floors! Installation was quick and the quality exceeded expectations.”</p>
-            <p class="font-semibold text-brand">— Mark R.</p>
-          </div>
-          <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
-            <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
-            <p class="text-gray-700 mb-4">“Professional, reliable, and great attention to detail. Highly recommend UT Contractor.”</p>
-            <p class="font-semibold text-brand">— Emily K.</p>
-          </div>
-        </div>
-        <div class="swiper-pagination mt-6"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-
-      <!-- Leave a Review Form -->
-      <div class="max-w-xl mx-auto mt-16">
-        <h3 class="text-2xl font-playfair text-brand mb-4">Leave a Review</h3>
-        <form action="https://formspree.io/f/xvgbjrlk" method="POST" class="space-y-4">
-          <input type="text" name="name" placeholder="Your Name"
-                 class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
-          <textarea name="review" placeholder="Write your review..." rows="4"
-                    class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required></textarea>
-          <input type="hidden" name="_subject" value="New Customer Review - UT Contractor">
-          <button type="submit" class="w-full bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">
-            Submit Review
-          </button>
-        </form>
-        <p class="text-sm text-gray-500 mt-3">* Reviews are sent for approval before appearing on the site.</p>
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact" class="scroll-mt-24 bg-white py-20 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-6">Get Your Free Estimate</h2>
-          <form action="https://formspree.io/f/xvgbjrlk" method="POST" class="space-y-4">
-            <input type="text" name="name" placeholder="Full Name"
-                   class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
-            <input type="tel" name="phone" placeholder="Phone Number"
-                   class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
-            <input type="email" name="email" placeholder="Email Address"
-                   class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
-            <textarea name="message" placeholder="Tell us about your project..." rows="4"
-                      class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand"></textarea>
-            <input type="hidden" name="_subject" value="New Estimate Request - UT Contractor">
-            <button type="submit" class="w-full bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">
-              Request Estimate
-            </button>
-          </form>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-brand mb-4">Contact Information</h3>
-          <p class="text-gray-700 mb-4">We proudly serve the entire Wasatch Front area.</p>
-          <p class="text-lg font-semibold text-gray-900">📞 <a href="tel:+13853479549" class="text-brand hover:underline">(385) 347-9549</a></p>
-          <p class="text-lg font-semibold text-gray-900">✉️ <a href="mailto:Utcontr@gmail.com" class="text-brand hover:underline">Utcontr@gmail.com</a></p>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/flooring.jpg" alt="Flooring" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand mb-2">Flooring</h3>
+          <p class="text-gray-600 mb-4">From hardwood to laminate to carpet, we provide full-service flooring solutions that combine durability with style.</p>
+          <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- ===== Footer ===== -->
-  <footer class="bg-brand text-lightbg py-12">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div>
-        <h3 class="font-bold mb-3">UT Contractor</h3>
-        <p class="text-sm">Tile • Flooring • Cabinets • Marble • Carpet<br>Licensed & Insured · Serving the Wasatch Front, UT</p>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/cabinets.jpg" alt="Cabinets" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand mb-2">Cabinetry</h3>
+          <p class="text-gray-600 mb-4">Custom and pre-made cabinets to enhance kitchens, bathrooms, and storage spaces with functionality and elegance.</p>
+          <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
+        </div>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#home" class="hover:underline">Home</a></li>
-          <li><a href="#services" class="hover:underline">Services</a></li>
-          <li><a href="#projects" class="hover:underline">Projects</a></li>
-          <li><a href="#reviews" class="hover:underline">Reviews</a></li>
-          <li><a href="#areas" class="hover:underline">Areas</a></li>
-          <li><a href="#about" class="hover:underline">About Us</a></li>
-          <li><a href="#contact" class="hover:underline">Contact</a></li>
-        </ul>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/marble.jpg" alt="Marble & stone" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand mb-2">Marble & Stone</h3>
+          <p class="text-gray-600 mb-4">Luxurious marble and stone installations for countertops, fireplaces, and flooring that make a bold statement.</p>
+          <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
+        </div>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Contact</h4>
-        <p class="text-sm">
-          <a href="tel:+13853479549" class="hover:underline">(385) 347-9549</a><br>
-          <a href="mailto:Utcontr@gmail.com" class="hover:underline">Utcontr@gmail.com</a>
-        </p>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Follow Us</h4>
-        <p class="text-sm">Social links coming soon</p>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/carpet.jpg" alt="Carpet" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-brand mb-2">Carpet</h3>
+          <p class="text-gray-600 mb-4">Professional carpet installation for comfort and style, with options for every room and budget.</p>
+          <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-5 py-2 rounded-lg">Get a Free Estimate</a>
+        </div>
       </div>
     </div>
-    <p class="text-center text-xs text-lightbg/70 mt-10">© <span id="year"></span> UT Contractor · All rights reserved.</p>
-  </footer>
+  </section>
 
-  <!-- SwiperJS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  <!-- ===== About Us Section ===== -->
+  <section id="about" class="bg-white py-20 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img src="assets/about-team.jpg" alt="UT Contractor team" class="rounded-2xl shadow-lg">
+      </div>
+      <div>
+        <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-6">About Us</h2>
+        <p class="text-gray-700 mb-6">For over 30 years, <span class="font-semibold">UT Contractor</span> has been transforming homes across Utah with expert tile, flooring, cabinetry, marble, and carpet services.</p>
+        <ul class="space-y-3 text-gray-700 mb-8">
+          <li>✔️ Licensed & Insured</li>
+          <li>✔️ 30+ Years of Experience</li>
+          <li>✔️ Free In-Home Estimates</li>
+          <li>✔️ Quality Workmanship</li>
+        </ul>
+        <a href="#contact" class="inline-block bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">Get Your Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="bg-lightbg py-20 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">Our Projects</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto mb-12">A showcase of our recent installations across Utah. See the quality and detail that sets us apart.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/project-tile1.jpg" alt="Bathroom tile project" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-brand mb-2">Bathroom Tile Remodel</h3>
+          <p class="text-gray-600 text-sm">Complete tile installation with modern finishes for a fresh new look.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/project-floor1.jpg" alt="Hardwood flooring project" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-brand mb-2">Hardwood Flooring</h3>
+          <p class="text-gray-600 text-sm">Durable and stylish hardwood floors installed in a family living room.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="assets/project-cabinets1.jpg" alt="Custom kitchen cabinets" class="h-56 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-brand mb-2">Custom Kitchen Cabinets</h3>
+          <p class="text-gray-600 text-sm">Handcrafted cabinets designed for beauty and functionality.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-16">
+      <a href="#contact" class="text-white bg-brand hover:bg-brandDark px-8 py-3 rounded-xl text-lg font-semibold shadow">Get a Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- ===== Reviews Section ===== -->
+  <section id="reviews" class="bg-white py-20 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">What Our Customers Say</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">We’re proud to earn the trust of homeowners across Utah. Here’s what some of our clients have shared.</p>
+    </div>
+    <div class="swiper max-w-4xl mx-auto">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+          <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+          <p class="text-gray-700 mb-4">“UT Contractor completely transformed our kitchen. The tile work is flawless and the team was professional.”</p>
+          <p class="font-semibold text-brand">— Sarah L.</p>
+        </div>
+        <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+          <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+          <p class="text-gray-700 mb-4">“We love our new hardwood floors! The installation was quick and the quality exceeded expectations.”</p>
+          <p class="font-semibold text-brand">— Mark R.</p>
+        </div>
+        <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+          <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+          <p class="text-gray-700 mb-4">“Professional, reliable, and great attention to detail. Highly recommend UT Contractor.”</p>
+          <p class="font-semibold text-brand">— Emily K.</p>
+        </div>
+      </div>
+      <div class="swiper-pagination mt-6"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="max-w-xl mx-auto mt-16">
+      <h3 class="text-2xl font-playfair text-brand mb-4">Leave a Review</h3>
+      <form action="https://formspree.io/f/mqadraqb" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
+        <textarea name="review" placeholder="Write your review..." rows="4" class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required></textarea>
+        <input type="hidden" name="_subject" value="New Customer Review - UT Contractor">
+        <button type="submit" class="w-full bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">Submit Review</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Service Areas Section ===== -->
+  <section id="areas" class="bg-lightbg py-20 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">Areas We Serve</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto mb-12">Proudly serving homeowners across Utah’s Wasatch Front and beyond.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto text-gray-700 text-base font-medium">
+      <div class="bg-white shadow rounded-xl py-3 px-4">Murray, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">South Salt Lake, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Salt Lake City, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Holladay, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Taylorsville, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Midvale, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Cottonwood Heights, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Kearns, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">West Valley City, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Sandy, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">West Jordan, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">South Jordan, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Herriman, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Riverton, UT Flooring Contractors</div>
+      <div class="bg-white shadow rounded-xl py-3 px-4">Bluffdale, UT Flooring Contractors</div>
+      <div
