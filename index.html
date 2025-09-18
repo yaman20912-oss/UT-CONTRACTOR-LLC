@@ -30,30 +30,72 @@
 </head>
 <body class="font-inter text-gray-900">
 
-/* ===== Top Bar / Header ===== */
-    .topbar{background:var(--brand);color:#fff}
-    .topbar .container{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:.5rem 0}
-    .topbar a{color:#fff}
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
-    .brand{display:flex;align-items:center;gap:.6rem}
-    .brand__logo{width:42px;height:42px;background:var(--brand);border-radius:.6rem;display:grid;place-items:center;color:#fff;font-weight:800;font-family:Montserrat}
-    .brand__name{font-weight:800;font-family:Montserrat;letter-spacing:.2px}
-    nav ul{list-style:none;display:flex;gap:1.1rem;margin:0;padding:0}
-    nav a{color:var(--ink);font-weight:600}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.75rem 1rem;border-radius:.6rem;font-weight:700}
-    .btn:hover{background:var(--brand-700)}
-    .ghost{background:transparent;border:1px solid var(--brand);color:var(--brand)}
-    .ghost:hover{background:var(--brand-50)}
-    .menu-btn{display:none}
+<!-- ===== LUXURY HEADER ===== -->
+<header class="site-header transparent">
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="tb-left">📞 <a href="tel:13853479549">385-347-9549</a></div>
+      <div class="tb-right">
+        <a href="locations.html">Service Areas</a>
+        <a class="btn btn-xs luxe" href="#contact">Free Estimate</a>
+      </div>
+    </div>
+  </div>
 
-    @media (max-width:900px){
-      nav ul{display:none}
-      .menu-btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.5rem .75rem;border-radius:.5rem;background:#fff}
-      .mobile{display:none;background:#fff;border-bottom:1px solid var(--border)}
-      .mobile.open{display:block}
-      .mobile a{display:block;padding:1rem;border-top:1px solid var(--border);color:var(--ink);font-weight:600}
-    }
+  <!-- Main nav -->
+  <div class="container nav">
+    <a class="brand" href="./" aria-label="UT Contractor">
+      <img src="assets/logo-wordmark.svg" alt="UT Contractor" height="40" />
+    </a>
+
+    <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">☰ Menu</button>
+
+    <nav class="primary" aria-label="Main">
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+
+        <li class="has-sub">
+          <a href="#services">Services</a>
+          <div class="dropdown" role="menu">
+            <a href="#services">Tile</a>
+            <a href="#services">Flooring</a>
+            <a href="#services">Cabinets</a>
+            <a href="#services">Marble</a>
+            <a href="#services">Carpet</a>
+          </div>
+        </li>
+
+        <li><a href="#gallery">Images</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+      <a class="btn nav-cta" href="#contact">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-nav" class="mobile" aria-label="Mobile" aria-hidden="true">
+    <a href="#home">Home</a>
+    <details>
+      <summary>Services</summary>
+      <a href="#services">Tile</a>
+      <a href="#services">Flooring</a>
+      <a href="#services">Cabinets</a>
+      <a href="#services">Marble</a>
+      <a href="#services">Carpet</a>
+    </details>
+    <a href="#gallery">Images</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#faqs">FAQs</a>
+    <a class="btn" href="#contact">Contact Us</a>
+    <a class="btn ghost" href="tel:13853479549">Call 385-347-9549</a>
+    <a href="locations.html">Service Areas</a>
+  </nav>
+</header>
+
   <!-- ===== Hero ===== -->
   <section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
     style="background-image: url('images/hero-bathroom.jpg'); background-size: cover; background-position: center;">
