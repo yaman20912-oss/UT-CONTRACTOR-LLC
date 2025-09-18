@@ -201,14 +201,13 @@ h2 { font-weight: 600; margin: .2rem 0; }
    Hero Section
 --------------------------------- */
 #home {
-  min-height: 100vh; /* full screen height */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
 
-  /* Background image + dark overlay */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/hero-bathroom.jpg') center/cover no-repeat;
