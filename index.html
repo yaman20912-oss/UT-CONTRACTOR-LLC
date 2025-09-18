@@ -13,9 +13,9 @@
       theme: {
         extend: {
           colors: {
-            brand: "#345B81",   /* deep blue */
-            brandDark: "#274566", /* darker hover blue */
-            lightbg: "#F8F5F1"   /* off-white */
+            brand: "#345B81",       /* deep blue */
+            brandDark: "#274566",   /* darker hover blue */
+            lightbg: "#F8F5F1"      /* off-white */
           },
           fontFamily: {
             inter: ["Inter", "sans-serif"],
@@ -52,7 +52,6 @@
       <!-- Contact + CTA -->
       <div class="flex items-center space-x-4">
         <a href="tel:+15551234567" class="text-brand font-semibold">(555) 123-4567</a>
-        <!-- ✅ FIXED BUTTON -->
         <a href="estimate.html" class="bg-brand hover:bg-brandDark text-lightbg px-4 py-2 rounded-lg shadow font-semibold">
           Get a Free Estimate
         </a>
@@ -74,14 +73,34 @@
       <p class="mt-1 text-lg md:text-xl">
         Licensed • Insured • Trusted Utah Contractor
       </p>
-      <!-- ✅ FIXED BUTTON -->
       <a href="estimate.html" class="mt-8 inline-block bg-brand hover:bg-brandDark text-lightbg px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
         Get a Free Estimate
       </a>
     </div>
   </section>
 
-  <!-- (rest of your sections stay the same) -->
+  <!-- ===== Why Choose Us ===== -->
+  <section class="py-16 bg-lightbg">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-playfair font-semibold mb-10">Why Choose UT Contractor?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="font-semibold text-lg mb-2">Licensed & Insured</h3>
+          <p>Peace of mind knowing your home is in professional hands.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="font-semibold text-lg mb-2">30+ Years of Experience</h3>
+          <p>Generations of craftsmanship with proven results.</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded">
+          <h3 class="font-semibold text-lg mb-2">Free Estimates</h3>
+          <p>No-pressure, in-home consultations to fit your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (services, projects, reviews, areas sections stay unchanged) -->
 
   <!-- ===== Footer ===== -->
   <footer id="footer" class="bg-brand text-lightbg py-12">
