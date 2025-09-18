@@ -30,23 +30,52 @@
 </head>
 <body class="font-inter text-gray-900">
 
-  <!-- ===== Header ===== -->
-  <header class="flex items-center justify-between px-6 py-4 shadow bg-white sticky top-0 z-50">
-    <div>
-      <a href="index.html"><img src="images/logo.png" alt="UT Contractor Logo" class="h-14 w-auto"></a>
-    </div>
-    <nav class="hidden md:flex space-x-6 font-medium">
-      <a href="#home" class="hover:text-brand">Home</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#projects" class="hover:text-brand">Projects</a>
-      <a href="#reviews" class="hover:text-brand">Reviews</a>
-      <a href="#areas" class="hover:text-brand">Areas</a>
-      <a href="#about" class="hover:text-brand">About Us</a>
+<!-- ===== Header (Luxe, simple) ===== -->
+<header class="site-header luxe">
+  <div class="container nav">
+    <!-- Logo (left) -->
+    <a class="brand" href="index.html" aria-label="UT Contractor">
+      <!-- Use your real wordmark file here -->
+      <img src="assets/logo-wordmark.svg" alt="UT Contractor" height="44">
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="primary" aria-label="Main">
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Images</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <!-- If you prefer to show service areas from your summary section: -->
+        <li class="hide-sm"><a href="#service-areas">Areas</a></li>
+      </ul>
+      <a class="btn nav-cta" href="#contact">Contact Us</a>
     </nav>
-    <div>
-      <a href="#footer" class="bg-brand text-white px-4 py-2 rounded hover:bg-brandDark">Contact Us</a>
-    </div>
-  </header>
+
+    <!-- Mobile menu button -->
+    <button class="menu-btn" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+      <!-- simple icon -->
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      Menu
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav id="mobile-nav" class="mobile" aria-label="Mobile" aria-hidden="true">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Images</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#service-areas">Areas</a>
+    <a class="btn" href="#contact">Contact Us</a>
+  </nav>
+</header>
 
   <!-- ===== Hero ===== -->
   <section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
