@@ -111,56 +111,164 @@ section { padding: clamp(2.5rem, 6vw, 4rem) 0; }
 .help { color: var(--muted); font-size: .92rem; }
 
 /* ===== Luxe Header ===== */
-.site-header{
-  position: sticky; top: 0; z-index: 60;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
   background: #fff;
   border-bottom: 1px solid var(--border);
   transition: box-shadow .2s ease, background .2s ease, border-color .2s ease;
 }
-.site-header.luxe{
-  background: rgba(255,255,255,.9);
+
+/* Luxe “blurred glass” effect when scrolled */
+.site-header.luxe {
+  background: rgba(255, 255, 255, .9);
   backdrop-filter: saturate(140%) blur(8px);
-  border-color: rgba(230,237,246,.7);
+  border-color: rgba(230, 237, 246, .7);
 }
-.header-scrolled{ box-shadow: 0 10px 28px rgba(2,40,84,.10); }
 
-.container.nav{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; padding:.75rem 0;
+/* Shadow when scrolling */
+.header-scrolled {
+  box-shadow: 0 10px 28px rgba(2, 40, 84, .10);
 }
-.brand img{ display:block; height:44px; width:auto; }
 
-/* Desktop nav */
-.primary{ display:flex; align-items:center; gap:1rem; }
-.primary .menu{ list-style:none; display:flex; gap:1.1rem; margin:0; padding:0; }
-.primary .menu > li > a{
-  position:relative; display:inline-block; padding:.25rem 0;
-  font-weight:600; color:var(--ink); text-decoration:none;
+/* ===== Layout ===== */
+.container.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .75rem 1.5rem;
 }
-.primary .menu > li > a::after{
-  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
-  background: linear-gradient(90deg,var(--accent),var(--brand));
-  transform: scaleX(0); transform-origin:left; transition: transform .22s ease;
-}
-.primary .menu > li > a:hover::after{ transform: scaleX(1); }
-.nav-cta{ margin-left:.25rem; }
 
-/* Hide “Areas” on phones (it’s in the drawer) */
-.hide-sm{ display:block; }
-@media (max-width:900px){ .hide-sm{ display:none; } }
-
-/* Mobile */
-.menu-btn{ display:none; align-items:center; gap:.5rem; border:1px solid var(--border);
-  padding:.5rem .75rem; border-radius:.6rem; background:#fff; color:var(--ink); font-weight:600; }
-@media (max-width:900px){
-  .primary .menu, .primary .nav-cta{ display:none; }
-  .menu-btn{ display:inline-flex; }
+.brand img {
+  display: block;
+  height: 44px;
+  width: auto;
 }
-#mobile-nav{ display:none; background:#fff; border-top:1px solid var(--border); }
-#mobile-nav.open{ display:block; }
-#mobile-nav a{
-  display:block; padding:1rem; border-top:1px solid var(--border);
-  color:var(--ink); font-weight:600; text-decoration:none;
+
+/* ===== Desktop Nav ===== */
+.primary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primary .menu {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.primary .menu > li > a {
+  position: relative;
+  display: inline-block;
+  padding: .25rem 0;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.primary .menu > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--brand));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .22s ease;
+}
+
+.primary .menu > li > a:hover {
+  color: var(--brand);
+}
+
+.primary .menu > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* CTA button in header */
+.nav-cta {
+  margin-left: .5rem;
+}
+
+.nav-cta a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  border-radius: .6rem;
+  box-shadow: var(--shadow);
+  transition: background .2s ease;
+}
+
+.nav-cta a:hover {
+  background: var(--brand-700);
+}
+
+/* ===== Mobile ===== */
+.menu-btn {
+  display: none;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid var(--border);
+  padding: .5rem .75rem;
+  border-radius: .6rem;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .primary .menu,
+  .primary .nav-cta {
+    display: none;
+  }
+  .menu-btn {
+    display: inline-flex;
+  }
+}
+
+#mobile-nav {
+  display: none;
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+#mobile-nav.open {
+  display: block;
+}
+
+#mobile-nav a {
+  display: block;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+#mobile-nav a:hover {
+  background: var(--brand-50);
+}
+
+/* ===== Hero Section Background Image ===== */
+#home {
+  background-image: url('images/hero-bathroom.jpg'); /* Replace with your path */
+  background-size: cover;         /* Fill screen */
+  background-position: center;    /* Keep focus centered */
+  background-repeat: no-repeat;   /* Prevent tiling */
+  background-attachment: fixed;   /* Optional: subtle parallax */
+  min-height: 100vh;              /* Full screen height */
+  position: relative;
 }
 
 /* ------------------------------
