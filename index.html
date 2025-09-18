@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>UT Contractor • Tile • Flooring • Cabinets • Marble • Carpet</title>
-  <meta name="description" content="UT Contractor — Licensed & insured contractor offering tile, flooring, cabinets, marble, and carpet services across the Wasatch Front, UT. Free estimates." />
+  <meta name="description" content="UT Contractor — Licensed & insured contractor offering tile, flooring, cabinets, marble, and carpet services across Utah. Free estimates." />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,114 +13,71 @@
       theme: {
         extend: {
           colors: {
-            brand: "#345B81",
-            brandDark: "#345B81"
-          },
-          fontFamily: {
-            playfair: ["Playfair Display", "serif"],
-            inter: ["Inter", "sans-serif"]
+            brand: "#2082D3",   /* business-card blue */
+            brandDark: "#1769B5",
+            accent: "#C5A76A"   /* subtle gold accent */
           }
         }
       }
     }
   </script>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-inter text-gray-900">
+<body class="font-sans text-gray-900">
 
-<!-- ===== Header / Navigation ===== -->
-<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-    
-    <!-- Logo -->
-    <a href="#home" class="flex items-center space-x-2">
-      <img src="images/logo-wordmark.svg" alt="UT Contractor Logo" class="h-10">
-    </a>
+  <!-- ===== Header ===== -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center space-x-2">
+        <img src="assets/logo-wordmark.svg" alt="UT Contractor Logo" class="h-10 w-auto">
+      </a>
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-10 font-medium text-gray-800">
-      <a href="#home" class="hover:text-brand">Home</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#projects" class="hover:text-brand">Projects</a>
-      <a href="#reviews" class="hover:text-brand">Reviews</a>
-      <a href="#areas" class="hover:text-brand">Areas</a>
-      <a href="#about" class="hover:text-brand">About Us</a>
-    </nav>
+      <!-- Nav -->
+      <nav class="hidden md:flex items-center space-x-6 font-medium">
+        <a href="#services" class="hover:text-brandDark">Services</a>
+        <a href="#projects" class="hover:text-brandDark">Projects</a>
+        <a href="#reviews" class="hover:text-brandDark">Reviews</a>
+        <a href="#areas" class="hover:text-brandDark">Areas</a>
+        <a href="#about" class="hover:text-brandDark">About Us</a>
+      </nav>
 
-    <!-- Contact + Estimate (Desktop) -->
-    <div class="hidden md:flex items-center space-x-4">
-      <span class="text-brand font-semibold">📞 (555) 123-4567</span>
-      <a href="quote.html" 
-         class="bg-brand hover:bg-brandDark text-white px-4 py-2 rounded-lg font-semibold shadow transition">
+      <!-- Contact -->
+      <div class="flex items-center space-x-4">
+        <a href="tel:+15551234567" class="text-brand font-semibold">(555) 123-4567</a>
+        <a href="#estimate" class="bg-accent hover:bg-brandDark text-white px-4 py-2 rounded-lg shadow">
+          Get a Free Estimate
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="relative h-screen flex items-center justify-center text-center text-white">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="assets/hero.jpg" alt="Remodel project" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/50"></div> <!-- overlay -->
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-3xl px-4">
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        Transforming Utah Homes for Over 30 Years
+      </h1>
+      <p class="mt-4 text-lg md:text-xl">
+        Expert Tile • Flooring • Cabinets • Marble • Carpet
+      </p>
+      <p class="mt-1 text-lg md:text-xl">
+        Licensed • Insured • Trusted Utah Contractor
+      </p>
+      <a href="#estimate" class="mt-8 inline-block bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
         Get a Free Estimate
       </a>
     </div>
+  </section>
 
-    <!-- Mobile Menu Button -->
-    <button @click="open = !open" class="md:hidden text-gray-800 focus:outline-none">
-      <!-- Hamburger Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Dropdown -->
-  <div x-show="open" class="md:hidden bg-white shadow-md">
-    <nav class="flex flex-col space-y-4 p-6 font-medium text-gray-800">
-      <a href="#home" class="hover:text-brand">Home</a>
-      <a href="#services" class="hover:text-brand">Services</a>
-      <a href="#projects" class="hover:text-brand">Projects</a>
-      <a href="#reviews" class="hover:text-brand">Reviews</a>
-      <a href="#areas" class="hover:text-brand">Areas</a>
-      <a href="#about" class="hover:text-brand">About Us</a>
-      <hr>
-      <a href="tel:5551234567" class="text-brand font-semibold">📞 (555) 123-4567</a>
-      <a href="quote.html" 
-         class="bg-brand hover:bg-brandDark text-white px-4 py-2 rounded-lg font-semibold shadow transition text-center">
-        Get a Free Estimate
-      </a>
-    </nav>
-  </div>
-</header>
-
-<!-- Alpine.js for Menu Toggle -->
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-<script>
-  document.addEventListener('alpine:init', () => {
-    Alpine.data('menu', () => ({ open: false }))
-  })
-</script>
-  
-<!-- ===== Hero ===== -->
-<section id="home" class="relative h-screen flex items-center justify-center text-center text-white"
-  style="background-image: url('images/hero-bathroom.jpg'); background-size: cover; background-position: center;">
-  
-  <!-- Dark overlay for readability -->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-  
-  <!-- Content -->
-  <div class="relative z-10 max-w-3xl mx-auto px-6 space-y-6">
-    <!-- Headline -->
-    <h1 class="text-4xl md:text-6xl font-playfair font-bold">
-      Transforming Utah Homes for Over 30 Years
-    </h1>
-    
-    <!-- Subheadline -->
-    <p class="text-lg md:text-2xl">
-      Expert Tile • Flooring • Cabinets • Marble • Carpet • Services <br>
-      Licensed • Insured
-    </p>
-    
-    <!-- Call-to-Action -->
-    <a href="quote.html" 
-       class="inline-block bg-brand px-6 py-3 rounded-lg font-semibold shadow hover:bg-brandDark transition">
-      Get a Free Estimate
-    </a>
-  </div>
-</section>
+</body>
+</html>
 
   <!-- ===== Why Choose Us ===== -->
   <section class="py-16 bg-gray-50">
