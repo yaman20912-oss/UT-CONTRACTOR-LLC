@@ -96,7 +96,7 @@ section { padding: clamp(2.5rem, 6vw, 4rem) 0; }
 .btn.ghost:hover { background: var(--brand-50); }
 .btn.luxe {
   background: transparent; border: 2px solid var(--accent); color: var(--accent);
-  padding: .75rem 1.1rem; /* ✅ fixed padding consistency */
+  padding: .75rem 1.1rem;
 }
 .btn.luxe:hover { background: rgba(197, 167, 106, .08); }
 
@@ -142,7 +142,6 @@ nav ul a.btn { color: #fff; }
     display: block; padding: 1rem; border-top: 1px solid var(--border);
     color: var(--ink); font-weight: 600;
   }
-  /* ✅ added hover feedback */
   .mobile a:hover { background: var(--brand-50); }
 }
 
@@ -162,7 +161,7 @@ nav ul a.btn { color: #fff; }
   border: 1px solid var(--border); border-radius: 18px;
   box-shadow: 0 24px 60px rgba(2, 40, 84, .20);
   padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 4vw, 2.4rem);
-  backdrop-filter: blur(4px) saturate(150%); /* ✅ stronger readability */
+  backdrop-filter: blur(4px) saturate(150%);
 }
 .hero-card h1 {
   font-family: "Playfair Display", serif;
