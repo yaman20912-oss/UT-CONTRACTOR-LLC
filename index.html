@@ -13,15 +13,23 @@
       theme: {
         extend: {
           colors: {
-            brand: "#345B81",   /* new deep navy */
-            lightbg: "#F8F5F1" /* new off-white */
+            brand: "#345B81",   /* deep blue */
+            brandDark: "#274566", /* darker hover blue */
+            lightbg: "#F8F5F1"   /* off-white */
+          },
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+            playfair: ["Playfair Display", "serif"]
           }
         }
       }
     }
   </script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans text-gray-900 bg-lightbg">
+<body class="font-inter text-gray-900 bg-lightbg">
 
   <!-- ===== Header ===== -->
   <header class="fixed top-0 left-0 w-full bg-lightbg shadow-md z-50">
@@ -44,7 +52,7 @@
       <!-- Contact + CTA -->
       <div class="flex items-center space-x-4">
         <a href="tel:+15551234567" class="text-brand font-semibold">(555) 123-4567</a>
-        <a href="#estimate" class="bg-brand hover:bg-gray-700 text-lightbg px-4 py-2 rounded-lg shadow">
+        <a href="#estimate" class="bg-brand hover:bg-brandDark text-lightbg px-4 py-2 rounded-lg shadow font-semibold">
           Get a Free Estimate
         </a>
       </div>
@@ -61,7 +69,7 @@
 
     <!-- Content -->
     <div class="relative z-10 max-w-3xl px-4">
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+      <h1 class="text-5xl md:text-6xl font-playfair font-bold leading-tight">
         Transforming Utah Homes for Over 30 Years
       </h1>
       <p class="mt-4 text-lg md:text-xl">
@@ -70,19 +78,16 @@
       <p class="mt-1 text-lg md:text-xl">
         Licensed • Insured • Trusted Utah Contractor
       </p>
-      <a href="#estimate" class="mt-8 inline-block bg-brand hover:bg-gray-700 text-lightbg px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
+      <a href="#estimate" class="mt-8 inline-block bg-brand hover:bg-brandDark text-lightbg px-6 py-3 rounded-xl text-lg font-semibold shadow-lg">
         Get a Free Estimate
       </a>
     </div>
   </section>
 
-</body>
-</html>
-
   <!-- ===== Why Choose Us ===== -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-16 bg-lightbg">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-2xl font-bold mb-10">Why Choose UT Contractor?</h2>
+      <h2 class="text-3xl font-playfair font-semibold mb-10">Why Choose UT Contractor?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 bg-white shadow rounded">
           <h3 class="font-semibold text-lg mb-2">Licensed & Insured</h3>
@@ -103,7 +108,7 @@
   <!-- ===== Services ===== -->
   <section id="services" class="py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8 text-center">Our Services</h2>
+      <h2 class="text-3xl font-playfair font-semibold mb-8 text-center">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 bg-white shadow rounded"><h3 class="font-semibold text-lg mb-2">Tile</h3><p>Showers, tubs, backsplashes, fireplaces, patios — porcelain, ceramic, stone.</p></div>
         <div class="p-6 bg-white shadow rounded"><h3 class="font-semibold text-lg mb-2">Flooring</h3><p>Hardwood, laminate, vinyl/LVP, engineered. Smooth, durable finishes.</p></div>
@@ -115,9 +120,9 @@
   </section>
 
   <!-- ===== Projects Preview ===== -->
-  <section id="projects" class="py-16 bg-gray-50">
+  <section id="projects" class="py-16 bg-lightbg">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-2xl font-bold mb-8">Featured Projects</h2>
+      <h2 class="text-3xl font-playfair font-semibold mb-8">Featured Projects</h2>
       <p class="mb-8">A glimpse at some of our recent work across Utah.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <img src="images/project1.jpg" alt="UT Contractor Project 1" class="h-48 w-full object-cover rounded shadow">
@@ -130,7 +135,7 @@
   <!-- ===== Reviews ===== -->
   <section id="reviews" class="py-16">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-2xl font-bold mb-8">What Our Clients Say</h2>
+      <h2 class="text-3xl font-playfair font-semibold mb-8">What Our Clients Say</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="p-6 bg-white shadow rounded"><p>"Amazing craftsmanship! Our new flooring looks perfect."</p><span class="block mt-2 text-sm">— Sarah M.</span></div>
         <div class="p-6 bg-white shadow rounded"><p>"Professional, reliable, and on time. Highly recommend."</p><span class="block mt-2 text-sm">— James R.</span></div>
@@ -140,9 +145,9 @@
   </section>
 
   <!-- ===== Areas We Serve ===== -->
-  <section id="areas" class="py-16 bg-gray-50">
+  <section id="areas" class="py-16 bg-lightbg">
     <div class="container mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8 text-center">Areas We Serve</h2>
+      <h2 class="text-3xl font-playfair font-semibold mb-8 text-center">Areas We Serve</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         <div class="p-4 bg-white shadow rounded text-center">Murray, UT</div>
         <div class="p-4 bg-white shadow rounded text-center">South Salt Lake, UT</div>
@@ -179,38 +184,38 @@
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer id="footer" class="bg-gray-900 text-gray-300 py-12">
+  <footer id="footer" class="bg-brand text-lightbg py-12">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
       <div>
-        <h3 class="font-bold text-white mb-3">UT Contractor</h3>
+        <h3 class="font-bold mb-3">UT Contractor</h3>
         <p class="text-sm">Tile • Flooring • Cabinets • Marble • Carpet<br>Licensed & Insured · Serving the Wasatch Front, UT</p>
       </div>
       <div>
-        <h4 class="font-semibold text-white mb-3">Quick Links</h4>
+        <h4 class="font-semibold mb-3">Quick Links</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="#home" class="hover:text-brand">Home</a></li>
-          <li><a href="#services" class="hover:text-brand">Services</a></li>
-          <li><a href="#projects" class="hover:text-brand">Projects</a></li>
-          <li><a href="#reviews" class="hover:text-brand">Reviews</a></li>
-          <li><a href="#areas" class="hover:text-brand">Areas</a></li>
-          <li><a href="#about" class="hover:text-brand">About Us</a></li>
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#reviews" class="hover:underline">Reviews</a></li>
+          <li><a href="#areas" class="hover:underline">Areas</a></li>
+          <li><a href="#about" class="hover:underline">About Us</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-semibold text-white mb-3">Contact</h4>
+        <h4 class="font-semibold mb-3">Contact</h4>
         <p class="text-sm">
-          <a href="tel:13853479549" class="hover:text-brand">385-347-9549</a><br>
-          <a href="mailto:Utcontr@gmail.com" class="hover:text-brand">Utcontr@gmail.com</a>
+          <a href="tel:13853479549" class="hover:underline">385-347-9549</a><br>
+          <a href="mailto:Utcontr@gmail.com" class="hover:underline">Utcontr@gmail.com</a>
         </p>
-        <h4 class="font-semibold text-white mt-5 mb-2">Hours</h4>
+        <h4 class="font-semibold mt-5 mb-2">Hours</h4>
         <p class="text-sm">Mon–Fri: 8:00 AM – 6:00 PM<br>Sat: 9:00 AM – 3:00 PM<br>Sun: Closed</p>
       </div>
       <div>
-        <h4 class="font-semibold text-white mb-3">Follow Us</h4>
+        <h4 class="font-semibold mb-3">Follow Us</h4>
         <p class="text-sm">Social links coming soon</p>
       </div>
     </div>
-    <p class="text-center text-xs text-gray-500 mt-10">© <span id="year"></span> UT Contractor · All rights reserved.</p>
+    <p class="text-center text-xs text-lightbg/70 mt-10">© <span id="year"></span> UT Contractor · All rights reserved.</p>
   </footer>
 
   <script>
