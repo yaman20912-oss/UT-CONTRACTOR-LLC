@@ -282,51 +282,92 @@
       </div>
     </section>
 
-    <!-- ===== Reviews Section ===== -->
-    <section id="reviews" class="scroll-mt-24 bg-white py-20 px-6 sm:px-12 lg:px-20">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">
-          What Our Customers Say
-        </h2>
-        <p class="text-gray-700 max-w-2xl mx-auto mb-12">
-          We’re proud to earn the trust of homeowners across Utah.
-          Here’s what some of our clients have shared about working with us.
+<!-- ===== Reviews Section ===== -->
+<section id="reviews" class="scroll-mt-24 bg-white py-20 px-6 sm:px-12 lg:px-20">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-playfair text-brand mb-4">
+      What Our Customers Say
+    </h2>
+    <p class="text-gray-700 max-w-2xl mx-auto">
+      We’re proud to earn the trust of homeowners across Utah. 
+      Here’s what some of our clients have shared about working with us.
+    </p>
+  </div>
+
+  <!-- Swiper Container -->
+  <div class="swiper max-w-4xl mx-auto">
+    <div class="swiper-wrapper">
+      <!-- Review 1 -->
+      <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+        <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 mb-4">
+          “UT Contractor completely transformed our kitchen. The tile work is flawless and the team was professional start to finish.”
         </p>
+        <p class="font-semibold text-brand">— Sarah L.</p>
       </div>
 
-      <!-- Reviews Grid -->
-      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-        <!-- Review 1 -->
-        <blockquote class="bg-lightbg rounded-2xl shadow-md p-6 text-left">
-          <p class="text-gray-700 mb-4" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</p>
-          <p class="text-gray-700 mb-4">
-            “UT Contractor completely transformed our kitchen.
-            The tile work is flawless and the team was professional start to finish.”
-          </p>
-          <footer class="font-semibold text-brand">— Sarah L.</footer>
-        </blockquote>
-
-        <!-- Review 2 -->
-        <blockquote class="bg-lightbg rounded-2xl shadow-md p-6 text-left">
-          <p class="text-gray-700 mb-4" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</p>
-          <p class="text-gray-700 mb-4">
-            “We love our new hardwood floors! The installation was quick,
-            and the quality exceeded our expectations.”
-          </p>
-          <footer class="font-semibold text-brand">— Mark R.</footer>
-        </blockquote>
-
-        <!-- Review 3 -->
-        <blockquote class="bg-lightbg rounded-2xl shadow-md p-6 text-left">
-          <p class="text-gray-700 mb-4" aria-label="5 out of 5 stars">⭐⭐⭐⭐⭐</p>
-          <p class="text-gray-700 mb-4">
-            “Professional, reliable, and great attention to detail.
-            I highly recommend UT Contractor for any home project.”
-          </p>
-          <footer class="font-semibold text-brand">— Emily K.</footer>
-        </blockquote>
+      <!-- Review 2 -->
+      <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+        <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 mb-4">
+          “We love our new hardwood floors! The installation was quick, and the quality exceeded our expectations.”
+        </p>
+        <p class="font-semibold text-brand">— Mark R.</p>
       </div>
-    </section>
+
+      <!-- Review 3 -->
+      <div class="swiper-slide bg-lightbg rounded-2xl shadow-md p-6 text-left">
+        <p class="text-yellow-500 mb-2">⭐⭐⭐⭐⭐</p>
+        <p class="text-gray-700 mb-4">
+          “Professional, reliable, and great attention to detail. I highly recommend UT Contractor for any home project.”
+        </p>
+        <p class="font-semibold text-brand">— Emily K.</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="swiper-pagination mt-6"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Leave a Review Form -->
+  <div class="max-w-xl mx-auto mt-16">
+    <h3 class="text-2xl font-playfair text-brand mb-4">Leave a Review</h3>
+    <form action="#" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name"
+             class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required>
+      <textarea name="review" placeholder="Write your review..." rows="4"
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand" required></textarea>
+      <button type="submit"
+              class="w-full bg-brand hover:bg-brandDark text-white px-6 py-3 rounded-lg text-lg font-semibold shadow">
+        Submit Review
+      </button>
+    </form>
+    <p class="text-sm text-gray-500 mt-3">* Reviews are submitted for approval before appearing on the site.</p>
+  </div>
+</section>
+
+<!-- SwiperJS (include before </body>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 
     <!-- ===== Service Areas Section ===== -->
     <section id="areas" class="scroll-mt-24 bg-lightbg py-20 px-6 sm:px-12 lg:px-20">
